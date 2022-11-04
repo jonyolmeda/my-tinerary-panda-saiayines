@@ -1,14 +1,15 @@
-import * as React from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+
 
 export default function AutoToTop() {
-  let location = useLocation();
-    return (
-  React.useEffect(() => {
-    
-  }, [location])
-  )
+  
+  let AutoToTop = () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
+  return (AutoToTop)
 }
+
 
 
   

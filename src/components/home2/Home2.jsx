@@ -1,9 +1,9 @@
 import React from 'react';
-import './main2.css';
+import './home2.css';
 import Carousel from '../Carousel/Carousel';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
-export default function Main2() {
+export default function Home2() {
   return (
     <>
     <div className='contenedor-main2'>
