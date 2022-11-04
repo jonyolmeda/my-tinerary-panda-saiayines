@@ -158,3 +158,5 @@ let eventsHotelsCasino = [{
         userId:  'user4'
 	},
 ]
+
+export default hotelsCasino

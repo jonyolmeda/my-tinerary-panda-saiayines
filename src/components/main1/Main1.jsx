@@ -1,6 +1,6 @@
 import React from 'react'
 import './main1.css'
-import CallToAction from '../buttons/CallToAction'
+import CallToAction from '../CallToAction/CallToAction'
 
 export default function main1() {
   return (
