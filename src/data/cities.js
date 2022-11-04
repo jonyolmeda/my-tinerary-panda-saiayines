@@ -1,4 +1,4 @@
-let ciudades = [
+let cities = [
     {
         id: `city1`,
         name: `London`,
@@ -96,6 +96,7 @@ let ciudades = [
         userId:  `admin4`
     },
 ]
+
 let touristActivities = [
     {
         id: `ta1`,
@@ -219,3 +220,5 @@ let touristActivities = [
     },
     
 ]
+
+export default cities;

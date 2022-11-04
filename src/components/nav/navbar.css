@@ -12,7 +12,7 @@
     background-color: #5E574D;
     justify-content: space-evenly;
     align-items: center;
-}
+    }
 .contenedor-logo{
     display: flex;
     align-items: center;
@@ -83,4 +83,9 @@ li a{
         flex-direction: column;
         height: auto;
     }
+    .logo-navbar{
+        height: 100%;
+        width: 60%;
+    }
 }
+
