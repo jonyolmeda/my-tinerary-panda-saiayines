@@ -1,8 +1,8 @@
 import React from 'react'
-import './main1.css'
+import './home1.css'
 import CallToAction from '../CallToAction/CallToAction'
 
-export default function main1() {
+export default function Home1() {
   return (
     <div className='contenedor'>
         <div className='contenedor-h1'>
