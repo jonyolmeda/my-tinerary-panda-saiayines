@@ -24,7 +24,18 @@
     font-weight: 600;
     width: 50%;
     font-size: 30px;
-    
+}
+
+.container-form-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    flex-direction: column;
+    gap: 1.5em;
+    font-weight: 600;
+    width: 50%;
+    font-size: 30px;
 }
 .container-button{
     display: flex;

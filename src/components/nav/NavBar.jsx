@@ -21,7 +21,7 @@ export default function NavBar() {
               <a href="/signup">Sign Up</a>
             </li>
             <li>
-              <a href="/">Log In</a>
+              <a href="/signin">Sign In</a>
             </li>
           </ul>
           

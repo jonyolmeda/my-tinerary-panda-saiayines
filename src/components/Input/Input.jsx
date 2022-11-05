@@ -11,7 +11,7 @@ export default function Input() {
     
     function saveData() {
       let userRegistered = JSON.parse(localStorage.getItem("register")) || []
-     let   userValue = {
+      let   userValue = {
             name: name,
             lastName:lastName,
             mail:mail,
@@ -21,12 +21,9 @@ export default function Input() {
         }
         userRegistered.push(userValue)
         localStorage.setItem("register", JSON.stringify(userRegistered))
-
-        if(userRegistered.user.includes(userValue.user)){
-        alert('Congratulations, you have been acepted!')
-        }
-       
     }
+
+ 
   return (
     <div>       
           <label >
