@@ -6,7 +6,6 @@ export default function SignUpC() {
   return (
     <div className='container-signup'>
       <Form1/>
-      
     </div>
   )
 }
