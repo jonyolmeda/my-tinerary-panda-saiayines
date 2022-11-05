@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className='contenedor-footer'>
       <div className="contenedor-logo">
-        <img className="logo-navbar" src="/images/logo.png" alt="logo" />
+        <img className="logo-navbar" src="/images/logonuevosf.png" alt="logo" />
       </div>
       <div className="contenedor-boton">
         <a href="/" className="boton">CITIES</a>

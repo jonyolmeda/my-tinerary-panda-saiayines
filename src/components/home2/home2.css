@@ -15,6 +15,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: space-evenly;
+    flex-grow: 1;
 }
 
 h3{
