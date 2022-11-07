@@ -60,24 +60,18 @@
         width: 40%;
     }
     .select{
-        width: 30%;
+        width: 33%;
     }
 }
 
-@media screen and (max-width:  570px){
-    .select{
-        width: 35%;
+@media screen and (max-width:  600px){
+    .container-search-select{
+        flex-direction: column;
     }
-}
-
-@media screen and (max-width:  500px){
-    .select{
-        width: 38%;
+    .input-search{
+        width: 150px;
     }
-}
-
-@media screen and (max-width:  450px){
     .select{
-        width: 45%;
+        width: 150px;
     }
 }
