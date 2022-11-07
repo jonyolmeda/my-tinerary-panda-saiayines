@@ -4,15 +4,28 @@
     padding: 0;
 }
 .container-input{
-    background-color: rgba(129, 129, 116, 0.486);
-    height: 70%;
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 90%;
     width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 30px;
     gap:2rem;
+    color: white;
+}
+.container-input2{
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 90%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap:2rem;
+    color: white;
 }
 .container-form{
     display: flex;
@@ -45,4 +58,31 @@
 .container-button-form{
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width:  710px){
+    .container-input{
+        height: 100%;
+        width: 400px;
+        border-radius: 30px;      
+}
+    .container-input2{
+        background-color: rgba(0, 0, 0, 0.719);
+        height: 100%;
+        width: 400px;
+    }
+    .container-form-two{
+        height: 100%;
+        
+    }
+}
+@media screen and (max-width:  400px){
+    .container-input{
+        width: 300px;
+    }
+    .container-input2{
+        width: 300px;
+    }
+    .container-form-two{
+        height: 100%;       
+    }
 }

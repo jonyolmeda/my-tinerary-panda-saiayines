@@ -1,7 +1,6 @@
 import React from 'react';
 import './home2.css';
 import Carousel from '../Carousel/Carousel';
-import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 export default function Home2() {
   return (
@@ -12,7 +11,6 @@ export default function Home2() {
             <Carousel/>
          </div>
          <div className='contenedor-ScrollToTop'>
-          <ScrollToTop/>
          </div>
     </div>
      </>

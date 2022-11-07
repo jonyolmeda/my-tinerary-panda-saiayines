@@ -2,7 +2,7 @@ let hotelsCasino = [
 	{	
 	id: 'hc1',
         name: 'Plaza Inn Doha',
-        photo: ['https://pix10.agoda.net/hotelImages/991/99106/99106_16103119140048294709.jpg?ca=6&ce=1&s=1024x768','https://www.kayak.ae/rimg/himg/06/f5/f4/expediav2-300009-4bd2b2-931479.jpg?width=1366&height=768&crop=true','https://foto.hrsstatic.com/fotos/0/3/545/350/80/000000/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F4%2F1%2F1%2F8%2F411817%2F411817_z_11632759.jpg/bVCYRVE%2FRIdSkD%2FWmQwCJg%3D%3D/506,336/6/Plaza_Inn_Doha-Doha-Standardzimmer-7-411817.jpg'],
+        photo: ['https://ak-d.tripcdn.com/images/200h13000000vhoy51385_Z_1100_824_R5_Q70_D.jpg','https://www.kayak.ae/rimg/himg/06/f5/f4/expediav2-300009-4bd2b2-931479.jpg?width=1366&height=768&crop=true','https://foto.hrsstatic.com/fotos/0/3/545/350/80/000000/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F4%2F1%2F1%2F8%2F411817%2F411817_z_11632759.jpg/bVCYRVE%2FRIdSkD%2FWmQwCJg%3D%3D/506,336/6/Plaza_Inn_Doha-Doha-Standardzimmer-7-411817.jpg'],
         capacity: 5000 ,
         citiId: 'city5',
         userId: 'admin1'
@@ -18,7 +18,7 @@ let hotelsCasino = [
 {	
 	id: 'hc3',
         name: 'Macao Cancun',
-        photo: ['https://noticaribe.com.mx/wp/wp-content/uploads/2020/12/MACAO.jpg','https://quintafuerzamx.s3.us-east-2.amazonaws.com/Leopard/uploads/2020/08/casino-macao-696x464.jpg','https://www.macaocancun.com/wp-content/uploads/2021/07/Ruleta.jpg'],
+        photo: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ6CbSKGMu03Oh69S_hiOny6MTXdZ17EbH_ViFeXCJpLH0aZrh4bqKsF-9Vjot0BzoXNE&usqp=CAU','https://quintafuerzamx.s3.us-east-2.amazonaws.com/Leopard/uploads/2020/08/casino-macao-696x464.jpg','https://www.macaocancun.com/wp-content/uploads/2021/07/Ruleta.jpg'],
         capacity: 4000 ,
         citiId: 'city7',
         userId: 'admin1'
@@ -50,7 +50,7 @@ let hotelsCasino = [
 {	
 	id: 'hc7',
         name: 'Hard Rock Hotel New',
-        photo: ['https://newyorkyimby.com/wp-content/uploads/2020/08/2019.03.08_HRH-Exterior-Rendering-711x1200.jpg','https://conocedores.com/wp-content/uploads/2022/05/hard-rock-nueva-york-viajes-destinos-estados-unidos-12050222.webp','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5oQ8ftvCo44LfqfIfhb6d0QoAfVumXLHgyf9K-3bWVZEwywI66r-0GH42cQN9cJ6bn9o&usqp=CAU'],
+        photo: ['https://hospitality-on.com/sites/default/files/styles/image994x499/public/import/contenu/Hard_Rock_hotel_casino_new_york.jpg?h=1a72c976&itok=OEedYPNo','https://conocedores.com/wp-content/uploads/2022/05/hard-rock-nueva-york-viajes-destinos-estados-unidos-12050222.webp','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5oQ8ftvCo44LfqfIfhb6d0QoAfVumXLHgyf9K-3bWVZEwywI66r-0GH42cQN9cJ6bn9o&usqp=CAU'],
         capacity: 3250 ,
         citiId: 'city2',
         userId: 'admin3'
@@ -74,7 +74,7 @@ let hotelsCasino = [
 {	
 	id: 'hc10',
         name: 'Le Bristol Paris',
-        photo: ['https://media.hrs.com/media/image/18/2a/99/Le_Bristol_Paris-Paris-Aussenansicht-8-17431_600x600.jpg','https://entreprisedigitale.info/wp-content/uploads/2016/05/Le_Bristol_Paris_-_Jardin_-_C_Marianne_Majerus.png','https://media.viajando.travel/adjuntos/271/imagenes/000/282/0000282855.jpg?0000-00-00-00-00-00'],
+        photo: ['https://img.ev.mu/images/hotels/43736/600x400/615650.jpg','https://entreprisedigitale.info/wp-content/uploads/2016/05/Le_Bristol_Paris_-_Jardin_-_C_Marianne_Majerus.png','https://media.viajando.travel/adjuntos/271/imagenes/000/282/0000282855.jpg?0000-00-00-00-00-00'],
         capacity:  3200,
         citiId: 'city3',
         userId: 'admin4'
@@ -82,7 +82,7 @@ let hotelsCasino = [
 {	
 	id: 'hc11',
         name: 'Fairmont Nile City',
-        photo: ['https://cf.bstatic.com/xdata/images/hotel/max1024x768/326897328.jpg?k=9234630b9f66dfd25a266f5f6c01461f55e3d1a6e7bd65c2bcaab5f4eabe6f84&o=&hp=1','https://www.kayak.com.ar/rimg/himg/61/81/fa/ice-229900374-70356552_3XL-059180.jpg?width=1366&height=768&crop=true','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/1e/ea/e5/deluxe-nile-room.jpg?w=700&h=-1&s=1'],
+        photo: ['https://www.lapatilla.com/wp-content/uploads/2020/08/Fairmont-Nile-City-Hotel.jpg','https://www.kayak.com.ar/rimg/himg/61/81/fa/ice-229900374-70356552_3XL-059180.jpg?width=1366&height=768&crop=true','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/1e/ea/e5/deluxe-nile-room.jpg?w=700&h=-1&s=1'],
         capacity: 3800 ,
         citiId: 'city8',
         userId: 'admin4'
