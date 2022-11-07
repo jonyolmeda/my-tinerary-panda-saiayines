@@ -1,5 +1,7 @@
 import React from 'react'
 import './hotelCard.css'
+import { Link } from "react-router-dom";
+
 export default function HotelCard(props) {
   let {img,name,id} = props
   return (
@@ -11,7 +13,7 @@ export default function HotelCard(props) {
       <p>{name}</p>
     </div>
     <div className='container-card-id'>
-      <a className='card-id' href={id}>Details</a>
+    <Link className='card-id' to={`/hoteldetail/${id}`}>Details</Link>
     </div>
     
   </div>

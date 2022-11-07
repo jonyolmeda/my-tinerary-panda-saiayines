@@ -159,4 +159,4 @@ let eventsHotelsCasino = [{
 	},
 ]
 
-export default hotelsCasino
+export  {hotelsCasino,eventsHotelsCasino}
