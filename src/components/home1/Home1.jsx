@@ -9,7 +9,7 @@ export default function Home1() {
          <h1>MyTinerary</h1>  
          <h2>See the world with your own two eyes</h2> 
         </div>      
-            <CallToAction Link='/' nameButton='Cities' />
+            <CallToAction Link='/cities' nameButton='Cities' />
             <CallToAction Link='/' nameButton='Hotels/Casinos' />      
     </div>
   )

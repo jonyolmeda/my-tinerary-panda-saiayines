@@ -8,7 +8,7 @@ export default function Footer() {
         <img className="logo-navbar" src="/images/logonuevosf.png" alt="logo" />
       </div>
       <div className="contenedor-boton">
-        <a href="/" className="boton">CITIES</a>
+        <a href="/cities" className="boton">CITIES</a>
         <a href="/" className="boton">HOTELS & CASINOS</a>
        </div>
 
