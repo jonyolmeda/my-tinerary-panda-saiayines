@@ -12,7 +12,7 @@ export default function CityDetailsC() {
     <>
  <div className='container-details'>
     <div className='container-card-details'>
-      <div className='img-card'>
+      <div className='img-card-details'>
         <img src={citySelected.photo} alt={citySelected.name} />
       </div>
       <div className='card-name-details'>
