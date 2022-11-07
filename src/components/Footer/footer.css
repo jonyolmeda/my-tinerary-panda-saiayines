@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap%27');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor-footer{
+    width: 100%;
+    min-height: 30vh;
+    display:flex;
+    background-color: #FFB86F;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 200px;
+}
+.logo-navbar{
+    height: 70%;
+    width: 40%;
+}
+.contenedor-boton{
+display: flex;
+width: 33%;
+gap: 3rem;
+height: 50%;
+align-items: center;
+justify-content: center;
+}
+.boton{
+    font-family: 'Amiri', serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.5rem;
+}
+.boton:hover {
+    background-color: rgb(170, 169, 169);
+    border-radius: 15px;
+} 
+.contenedor-github{
+    display:flex;
+    flex-direction: column;
+    width: 33%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-imagen{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.contenedor-github img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.contenedor-imagen a{
+    text-decoration: none;
+    color:white;
+    font-size: 700;
+}
+
+
+@media screen and (max-width: 700px){
+    .contenedor-footer{
+        flex-direction: row;
+        }
+    .contenedor-github{
+       flex-direction: row;
+       width: 100%;
+       height: 100%;
+       }
+       .contenedor-imagen{
+        gap: 0rem;
+    }
+    .logo-navbar{
+        height: 100px;
+        width: 100px;
+    }
+    .contenedor-boton{
+        width: 33%;
+        gap: 1.5rem;
+        height: 50%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 515px){
+    .contenedor-footer{
+        height: 20vh;
+        }
+    .boton{
+        font-size: 15px;
+    }
+}
