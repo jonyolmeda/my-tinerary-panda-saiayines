@@ -1,5 +1,5 @@
 import React from 'react'
-import cities from '../../data/cities'
+import {cities} from '../../data/cities'
 import hotelsCasino from '../../data/hotelsCasino'
 import CarouselImgs from '../Carouselimgs/CarouselImgs'
 import './carousel.css'
