@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
 import './newcityinput.css'
 
-export default function NewCityC() {
+export default function NewCityInput() {
       const [cityname, setCityName] = useState('')
       const [continent, setContinent] = useState('')
       const [population, setPopulation] = useState('')
