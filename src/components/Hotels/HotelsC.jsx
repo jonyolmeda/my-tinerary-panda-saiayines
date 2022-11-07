@@ -1,6 +1,6 @@
 import React from 'react'
 import './hotelsc.css'
-import hotelsCasino from '../../data/hotelsCasino'
+import {hotelsCasino} from '../../data/hotelsCasino'
 import HotelCard from '../HotelCard/HotelCard'
 
 
