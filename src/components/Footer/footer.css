@@ -75,6 +75,7 @@ justify-content: center;
 @media screen and (max-width: 700px){
     .contenedor-footer{
         flex-direction: row;
+        height: 20vh;
         }
     .contenedor-github{
        flex-direction: row;
@@ -94,12 +95,6 @@ justify-content: center;
         height: 50%;
         flex-direction: column;
     }
-}
-
-@media screen and (max-width: 515px){
-    .contenedor-footer{
-        height: 20vh;
-        }
     .boton{
         font-size: 15px;
     }
