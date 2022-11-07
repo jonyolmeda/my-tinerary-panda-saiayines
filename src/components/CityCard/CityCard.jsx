@@ -1,5 +1,6 @@
 import React from 'react'
 import './citycard.css'
+import { Link } from "react-router-dom";
 
 export default function CityCard(props) {
     let {img,name,id} = props
@@ -12,7 +13,7 @@ export default function CityCard(props) {
         <p>{name}</p>
       </div>
       <div className='container-card-id'>
-        <a className='card-id' href={id}>Details</a>
+        <Link className='card-id' to={`/citydetails/${id}`}>Details</Link>
       </div>
       
     </div>

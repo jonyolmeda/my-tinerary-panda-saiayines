@@ -1,7 +1,7 @@
 import {React,useRef} from 'react'
 import './citiesc.css'
 import CityCard from '../CityCard/CityCard'
-import cities from '../../data/cities'
+import {cities} from '../../data/cities'
 import Checkbox from '../Checkbox/Checkbox.jsx'
 
 
