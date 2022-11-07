@@ -33,11 +33,17 @@
 }
 .input-cards{
     height: 40px;
-    width: 50%;
+    width:  300px;
     border-radius: 10px;
 }
 .checkbox-cards{
     display: flex;
     gap:2rem;
     color: white;
+}
+@media screen and (max-width: 530px){
+    .checkbox-cards{
+    flex-direction: column;
+    align-items: flex-end;
+}
 }

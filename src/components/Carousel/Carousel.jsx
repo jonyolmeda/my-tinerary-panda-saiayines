@@ -8,8 +8,8 @@ import { useState ,useEffect} from 'react'
 
 export default function Carousel() {
     let [numeroAcambiar,setNumeroAcambiar] = useState(0)
-/*     let [id,setId] = useState(0)  */
-   /*  useEffect(
+     let [id,setId] = useState(0)
+    useEffect(
       ()=>{
        let idInterval = setInterval(
           ()=> {
@@ -20,7 +20,7 @@ export default function Carousel() {
           setId(idInterval)
           return clearInterval(id)
           // eslint-disable-next-line
-      },[numeroAcambiar]) */
+      },[numeroAcambiar])
   
       
     let arrayImagesCities = [];
@@ -35,7 +35,7 @@ export default function Carousel() {
         else{
           setNumeroAcambiar(0)
         }
-        /* clearInterval(id) */
+         clearInterval(id) 
       }
 
       let back = () =>{
@@ -45,7 +45,7 @@ export default function Carousel() {
         else{
           setNumeroAcambiar(arrayImagesCities.length-1)
         }
-       /*  clearInterval(id) */
+         clearInterval(id) 
       }   
   
       return (

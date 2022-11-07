@@ -16,7 +16,6 @@ export default function HotelsC() {
          <input className='input-search' id='search' type="search" placeholder='Search Hotels...' />
          </div>
       <div className='container-cards'>
-        <HotelCard/>
         {hotelsCasino.map((hotelData) => {
           return (<HotelCard img={hotelData.photo[0]} name={hotelData.name} id={hotelData.id}/>)
         })}

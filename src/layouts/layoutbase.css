@@ -13,3 +13,12 @@
     display: flex;
     flex-grow: 1;
 }
+.contenedor-ScrollToTop{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 3rem;
+    padding-bottom: 1.5rem;
+    position: sticky;
+    bottom: 0;
+}

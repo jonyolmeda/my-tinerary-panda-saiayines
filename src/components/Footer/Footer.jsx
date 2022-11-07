@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 export default function Footer() {
   return (
@@ -17,7 +18,11 @@ export default function Footer() {
         <img src='/images/github.png' alt='GitHub'></img><a href='https://github.com/jonyolmeda'>Jonathan Olmeda</a>
         <a href='https://github.com/pungitoregerman'>German Pungitore</a>
         </div>
-       </div>   
+        
+       </div>
+         <div className="contenedor-ScrollToTop">
+          <ScrollToTop/>
+        </div>  
   </div>
   ) 
 }
