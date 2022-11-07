@@ -24,7 +24,7 @@ background-size: cover;
 .container-card-details img{
     width: 100%;
 }
-.img-card img{
+.img-card-details img{
     width: 600px;
     height: 400px;
     object-fit: cover;
@@ -36,7 +36,7 @@ background-size: cover;
         height: 400px;
    
     }
-    .img-card img{
+    .img-card-details img{
         width: 400px;
         height: 300px;
     }
@@ -47,7 +47,7 @@ background-size: cover;
         height: 300px;
    
     }
-    .img-card img{
+    .img-card-details img{
         width: 300px;
         height: 200px;
     }
