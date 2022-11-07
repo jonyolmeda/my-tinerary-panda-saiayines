@@ -10,7 +10,7 @@ export default function NavBar() {
       <div className="contenedor-boton">
         <a href="/" className="boton">HOME</a>
         <a href="/cities" className="boton">CITIES</a>
-        <a href="/" className="boton">HOTELS & CASINOS</a>
+        <a href="/hotels" className="boton">HOTELS & CASINOS</a>
        </div>
       
       <div className="contenedor-lista">

@@ -10,7 +10,7 @@ export default function Home1() {
          <h2>See the world with your own two eyes</h2> 
         </div>      
             <CallToAction Link='/cities' nameButton='Cities' />
-            <CallToAction Link='/' nameButton='Hotels/Casinos' />      
+            <CallToAction Link='/hotels' nameButton='Hotels/Casinos' />      
     </div>
   )
 }

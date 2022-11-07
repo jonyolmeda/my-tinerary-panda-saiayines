@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container-hotels{
+    background-image: url(/public/images/353018.jpg);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    flex-direction: column;
+}
+.container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.container-search-select{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.input-search{
+    height: 40px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.select{
+    height: 40px;
+    width: 20%;
+    border-radius: 10px;
+}
