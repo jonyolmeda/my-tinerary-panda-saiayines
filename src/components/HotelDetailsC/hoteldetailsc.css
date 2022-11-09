@@ -2,7 +2,8 @@
     width: 800px;
     height: 600px;
     border-radius: 50px;
-    background: #020122;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(52,172,207,1) 100%);
     box-shadow: 15px 15px 30px #bebebe7d,
                 -15px -15px 30px #ffffff65;
     display: flex;
@@ -16,10 +17,12 @@
 width: 100%;
 display: flex;
 justify-content: center;
+flex-direction: column;
 padding-top: 2rem;
 background-image: url(/public/images/353018.jpg);
 background-repeat: no-repeat;
 background-size: cover;
+align-items: center;
 }
 .container-card-details img{
     width: 100%;
@@ -29,6 +32,36 @@ background-size: cover;
     height: 400px;
     object-fit: cover;
     border-radius:  0 30px  0 30px;
+}
+.container-details-events{
+width: 90%;
+display: flex;
+justify-content: center;
+padding-top: 2rem;
+flex-direction: column;
+padding-bottom: 2rem;
+}
+.container-card-details-events{
+    width: 100%;
+    border-radius: 0 30px  0 30px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(52,172,207,1) 100%);
+    box-shadow: 15px 15px 30px #bebebe7d,
+                -15px -15px 30px #ffffff65;
+    display: flex;
+    color: white;
+    font-size: 20px;
+    gap: 2rem;
+    justify-content: center;
+}
+.img-card-details-events img{
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius:  0 30px  0 30px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
 }
 @media screen and (max-width: 800px){
     .container-card-details{
@@ -41,6 +74,22 @@ background-size: cover;
         height: 300px;
     }
 }
+@media screen and (max-width: 750px){
+    .container-card-details-events{
+        width: 100%;
+        font-size: 16px;
+        gap: 1.5rem;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-population-details-events{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 600px){
     .container-card-details{
         width: 400px;
@@ -51,4 +100,8 @@ background-size: cover;
         width: 300px;
         height: 200px;
     }
+    .container-card-details-events{
+        font-size: 12px;
+    }
+
 }
