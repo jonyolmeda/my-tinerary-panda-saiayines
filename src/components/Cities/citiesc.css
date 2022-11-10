@@ -41,6 +41,19 @@
     gap:2rem;
     color: white;
 }
+.container-plus{
+    display: flex;
+    gap: 2rem;
+}
+.add-city{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
 @media screen and (max-width: 530px){
     .checkbox-cards{
     flex-direction: column;

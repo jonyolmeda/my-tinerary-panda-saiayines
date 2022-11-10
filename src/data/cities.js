@@ -221,4 +221,4 @@ let touristActivities = [
     
 ]
 
-export default cities;
+export {cities,touristActivities}

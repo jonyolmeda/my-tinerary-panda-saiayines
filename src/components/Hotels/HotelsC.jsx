@@ -1,6 +1,6 @@
 import React from 'react'
 import './hotelsc.css'
-import hotelsCasino from '../../data/hotelsCasino'
+import {hotelsCasino} from '../../data/hotelsCasino'
 import HotelCard from '../HotelCard/HotelCard'
 
 
@@ -14,6 +14,7 @@ export default function HotelsC() {
             <option value="Descending">Descending</option>
         </select>
          <input className='input-search' id='search' type="search" placeholder='Search Hotels...' />
+         <a className='add-city' href="/newcity">Add new hotel/casino</a>
          </div>
       <div className='container-cards'>
         {hotelsCasino.map((hotelData) => {
@@ -23,3 +24,6 @@ export default function HotelsC() {
     </div>  
   )
 }
+
+
+         

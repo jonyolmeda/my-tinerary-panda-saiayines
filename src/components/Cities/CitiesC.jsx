@@ -1,7 +1,7 @@
 import {React,useRef} from 'react'
 import './citiesc.css'
 import CityCard from '../CityCard/CityCard'
-import cities from '../../data/cities'
+import {cities} from '../../data/cities'
 import Checkbox from '../Checkbox/Checkbox.jsx'
 
 
@@ -11,7 +11,11 @@ export default function Cities() {
   return (
     <div className='container-cities'>
       <div className='container-input-cards'>
-      <input className='input-cards' ref={search} id='search' type="search" placeholder='Search city...' />
+        <div className='container-plus'>
+          <input className='input-cards' ref={search} id='search' type="search" placeholder='Search city...' />
+          <a className='add-city' href="/newcity">Add new city</a>
+          
+        </div>
       <div className='checkbox-cards'>
         <Checkbox/>
       </div> 

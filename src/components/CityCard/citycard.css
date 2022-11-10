@@ -7,7 +7,8 @@
     width: 250px;
     height: 300px;
     border-radius: 30px;
-    background: #020122;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(52,172,207,1) 100%);
     box-shadow: 15px 15px 30px #bebebe7d,
                 -15px -15px 30px #ffffff65;
     display: flex;

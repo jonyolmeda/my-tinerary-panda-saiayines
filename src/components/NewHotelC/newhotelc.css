@@ -5,7 +5,7 @@
 }
 .container-input{
     background-color: rgba(0, 0, 0, 0.719);
-    height: 90%;
+    height: 70%;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -15,35 +15,14 @@
     gap:2rem;
     color: white;
 }
-.container-input2{
-    background-color: rgba(0, 0, 0, 0.719);
-    height: 90%;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    gap:2rem;
-    color: white;
+.container-input h4{
+    font-size: 30px;
 }
 .container-form{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    flex-direction: column;
-    gap: 1.5em;
-    font-weight: 600;
-    width: 50%;
-    font-size: 30px;
-}
-
-.container-form-two{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60%;
     flex-direction: column;
     gap: 1.5em;
     font-weight: 600;
@@ -59,7 +38,7 @@
     display: flex;
     justify-content: center;
 }
-@media screen and (max-width:  710px){
+ @media screen and (max-width:  710px){
     .container-input{
         height: 100%;
         width: 400px;
