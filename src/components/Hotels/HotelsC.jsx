@@ -14,7 +14,7 @@ export default function HotelsC() {
             <option value="Descending">Descending</option>
         </select>
          <input className='input-search' id='search' type="search" placeholder='Search Hotels...' />
-         <a className='add-city' href="/newcity">Add new hotel/casino</a>
+         <a className='add-city' href="/newhotel">Add new hotel/casino</a>
          </div>
       <div className='container-cards'>
         {hotelsCasino.map((hotelData) => {
