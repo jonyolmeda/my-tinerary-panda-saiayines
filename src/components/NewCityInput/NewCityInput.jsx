@@ -16,7 +16,7 @@ export default function NewCityInput() {
         alert('Please, complete all the fields.')    
         } else{
           let city = {name, continent ,population , photo, userId}
-          axios.post(`${URL}/cities/create`,city)
+          axios.post(`${URL}/cities/`,city)
           .then(res => {
             console.log(res);
           })
