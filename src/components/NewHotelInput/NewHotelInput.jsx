@@ -16,7 +16,7 @@ export default function NewHotelInput() {
         alert('Please, complete all the fields.')    
         } else{
           let hotel = {name, photo ,capacity , cityId, userId}
-          axios.post(`${URL}/hotels/create`,hotel)
+          axios.post(`${URL}/hotels/`,hotel)
 
           .then(res => {
             console.log(res);
