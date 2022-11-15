@@ -1,66 +1,73 @@
 import {React, useState, useEffect} from 'react'
 import './citiesc.css'
 import CityCard from '../CityCard/CityCard'
-import Checkbox from '../Checkbox/Checkbox.jsx'
 import axios from 'axios'
 import { URL } from '../../api/url'
 
 
-
 export default function Cities() {
+  let [checkboxContinent, setCheckboxContinent] = useState([])
+  let [cities, setCities] = useState([])
+  let [checked, setChecked] = useState([])
+  let [searched, setSearched] = useState('')
 
-  
-  let filteredBySearch = []
+  useEffect(() => {
+    axios.get(`${URL}/cities`)
+        .then(res => setCheckboxContinent(res.data.response))
+        .catch(err => console.log(err.message))
+}, [])
 
+    useEffect(() => {
+        let checkQuery = checked.slice()
+        if(checked.length > 0){
+            checkQuery = checked.join('&continent=')
+        }
+        axios.get(`${URL}/cities?name=${searched}&continent=${checkQuery}`)
+            .then(res => setCities(res.data.response))
+            .catch(err => console.log(err.message))
+    }, [searched, checked])
 
-    const [search, setSearch] = useState('')
-    if (search !== '') {
-        console.log(search)
+  let checkManager = (e) => {
+    let auxChecked = [...checked]
+    if(e.target.checked){
+        auxChecked.push(e.target.value)
+    }else{
+        auxChecked = auxChecked.filter(e => e !== e.target.value)
     }
+    setChecked(auxChecked)
+}
+let inputManager = (e) => {
+  setSearched(e.target.value)
+  
+}
+console.log(searched)
 
-
-
-    
-  let [city, setCity] = useState([])
-  useEffect(() =>{
-    axios.get(`${URL}/cities?name=${search}`)
-    .then(res => {
-       
-      let resData = (res.data.response);
-      setCity(resData)})
-  },[])
-  filteredBySearch = city.sort((a, b) => a.name.localeCompare(b.name))
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   return (
+    
     <div className='container-cities'>
       <div className='container-input-cards'>
         <div className='container-plus'>
-          <input onChange={e => {
-                                let search = e.target.value
-                                setSearch(search)
-                                filteredBySearch = city.filter(iteracion => iteracion.name.toLowerCase().includes(search.toLowerCase()))
-                                console.log(filteredBySearch)}} className='input-cards' id='search' type="search" placeholder='Search city...' />
-          <a className='add-city' href="/newcity">Add new city</a>
-          
+          <input onChange={inputManager} className='input-cards' id='search' type="search" placeholder='Search city...' />
+          <a className='add-city' href="/newcity">Add new city</a>         
         </div>
       <div className='checkbox-cards'>
-        <Checkbox/>
-      </div> 
-      
+      {
+         Array.from(new Set(checkboxContinent.map(city => city.continent))).map(e => {
+             return (
+            <label className='check-label' key={e}>
+                <input onClick={checkManager} type='checkbox' value={e} /> {e}
+            </label>
+      )
+          })
+      }
+      </div>    
       </div>
       <div className='container-cards'>
-        {city.map((citydata) => {
-          return (<CityCard img={citydata.photo} name={citydata.name} id={citydata._id}/>)
-        })}
+      {
+      cities.length > 0 ?
+      cities.map(item=> <CityCard name={item.name} id={item._id} img={item.photo[0]}/>) :
+      <h3>The cities hasn't been found</h3>
+                }
       </div> 
     </div>      
 )}
