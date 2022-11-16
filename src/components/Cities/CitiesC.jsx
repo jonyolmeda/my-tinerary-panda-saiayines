@@ -20,7 +20,7 @@ export default function Cities() {
     useEffect(() => {
         let checkQuery = checked.slice()
         if(checked.length > 0){
-            checkQuery = checked.join('&continent=')
+            checkQuery = checked.join(',')
         }
         axios.get(`${URL}/cities?name=${searched}&continent=${checkQuery}`)
             .then(res => setCities(res.data.response))
@@ -32,7 +32,7 @@ export default function Cities() {
     if(e.target.checked){
         auxChecked.push(e.target.value)
     }else{
-        auxChecked = auxChecked.filter(e => e !== e.target.value)
+        auxChecked = auxChecked.filter(element => element !== e.target.value)
     }
     setChecked(auxChecked)
 }
