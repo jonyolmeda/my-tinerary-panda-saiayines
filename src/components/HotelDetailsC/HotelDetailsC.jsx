@@ -54,7 +54,7 @@ export default function HotelDetailsC() {
             </div>
             <div className='card-population-details-events'>
             <p>Description: {events.description}</p>
-            <p>Price: USD{events.price}</p>
+            <p>Price: USD {events.price}</p>
 
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function CityCard(props) {
         <p>{name}</p>
       </div>
       <div className='container-card-id'>
-        <Link className='card-id' to={`/citydetails/${id}`}>Details</Link>
+        <Link className='card-id' to={`/detailCity/${id}`}>Details</Link>
       </div>
       
     </div>
