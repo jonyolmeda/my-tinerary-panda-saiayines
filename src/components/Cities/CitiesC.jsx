@@ -1,61 +1,71 @@
-import {React, useState, useEffect} from 'react'
+import {React, useState, useEffect, useRef } from 'react'
 import './citiesc.css'
 import CityCard from '../CityCard/CityCard'
 import axios from 'axios'
 import { URL } from '../../api/url'
+import { useSelector, useDispatch } from 'react-redux'
+import cityAction from '../../redux/actions/cityAction'
+import cityFilterAction from '../../redux/actions/cityFilterAction'
 
+export const CitiesC = () => {
 
-export default function Cities() {
-  let [checkboxContinent, setCheckboxContinent] = useState([])
-  let [cities, setCities] = useState([])
-  let [checked, setChecked] = useState([])
-  let [searched, setSearched] = useState('')
+  let [checkCities, setCheckCities] = useState([])
+  let searchRef = useRef(null)
+  const dispatch = useDispatch()
+  const {setChecked, setSearched} = cityFilterAction
+  const filter = useSelector(state => state.CityFilterReducer)
+  const {getCities, getFilteredCities} = cityAction
+  const {cities} = useSelector(state => state.cityReducer)
+
 
   useEffect(() => {
     axios.get(`${URL}/cities`)
-        .then(res => setCheckboxContinent(res.data.response))
-        .catch(err => console.log(err.message))
+    .then(res => setCheckCities(res.data.response))
+    .catch(err => console.log(err.message))
 }, [])
 
-    useEffect(() => {
-        let checkQuery = checked.slice()
-        if(checked.length > 0){
-            checkQuery = checked.join(',')
-        }
-        axios.get(`${URL}/cities?name=${searched}&continent=${checkQuery}`)
-            .then(res => setCities(res.data.response))
-            .catch(err => console.log(err.message))
-    }, [searched, checked])
+useEffect(() => {
+  if(cities.length < 1 && filter.name === '' && filter.continent.length < 1){
+      dispatch(getCities())
+  } else{
+      dispatch(getFilteredCities(filter))
+  }
+}, [])
 
-  let checkManager = (e) => {
-    let auxChecked = [...checked]
-    if(e.target.checked){
-        auxChecked.push(e.target.value)
-    }else{
-        auxChecked = auxChecked.filter(element => element !== e.target.value)
-    }
-    setChecked(auxChecked)
-}
+useEffect(() => {
+  dispatch(getFilteredCities(filter))
+}, [filter])
+
 let inputManager = (e) => {
-  setSearched(e.target.value)
-  
+  let searched = searchRef.current.value
+  dispatch(setSearched(searched))
+} 
+
+let checkManager = (e) => {
+  let auxArray = [...filter.continent]
+  if(e.target.checked){
+      auxArray.push(e.target.value)
+  }else{
+      auxArray = auxArray.filter(el => el !== e.target.value)
+  }
+  let checked = auxArray
+  dispatch(setChecked(checked))
 }
-console.log(searched)
 
   return (
     
     <div className='container-cities'>
       <div className='container-input-cards'>
         <div className='container-plus'>
-          <input onChange={inputManager} className='input-cards' id='search' type="search" placeholder='Search city...' />
+          <input onChange={inputManager} ref={searchRef} className='input-cards' value={filter.name} id='search' type="search" placeholder='Search city...' />
           <a className='add-city' href="/newcity">Add new city</a>         
         </div>
       <div className='checkbox-cards'>
       {
-         Array.from(new Set(checkboxContinent.map(city => city.continent))).map(e => {
+         Array.from(new Set(checkCities.map(city => city.continent))).map(e => {
              return (
             <label className='check-label' key={e}>
-                <input onClick={checkManager} type='checkbox' value={e} /> {e}
+                <input checked={filter.continent.includes(e) ? true : false} onClick={checkManager} type='checkbox' value={e} /> {e}
             </label>
       )
           })
