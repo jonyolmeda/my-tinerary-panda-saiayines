@@ -1,0 +1,15 @@
+.conteiner-cityBy-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.sub-img-by{
+    border-radius: 10px 0 10px 0;
+    object-fit: cover;
+    gap: 1rem;
+    width: 300px;
+    height: 300px;
+}

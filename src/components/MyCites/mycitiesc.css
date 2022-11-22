@@ -1,0 +1,15 @@
+.text-center-title{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container-by{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: steelblue;
+  gap: 2rem;
+}
