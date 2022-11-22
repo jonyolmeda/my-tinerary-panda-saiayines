@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {EditCard} from './EditCard'
-import './carduser.css'
+import './carduser2.css'
 
 
 export default function CardUser(props) {
@@ -15,8 +15,8 @@ let [push,setPush]= useState(false)
                 <h4>{name}</h4>
                 <p>capacity: {capacity}</p>
                 <div className='buttons-hotels-by'>
-                <button className='button' value={id}  onClick={()=>setPush(!push)}><span class="button_top">Edit</span></button>
-                <button className='button'><span class="button_top">Delete</span></button>
+                <button className='button-byHotel' value={id}  onClick={()=>setPush(!push)}><span class="button_top">Edit</span></button>
+                <button className='button-byHotel'><span class="button_top">Delete</span></button>
                 </div>
                 
             </div>
