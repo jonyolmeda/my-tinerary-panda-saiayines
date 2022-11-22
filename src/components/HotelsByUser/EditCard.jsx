@@ -21,7 +21,7 @@ export function EditCard({id}) {
         e.target.name.value === '' ? vacio.name = e.target.name.value : editHotel.name=e.target.name.value
         e.target.capacity.value === '' ? vacio.capacity = e.target.capacity.value : editHotel.capacity=e.target.capacity.value
         e.target.photo.value === '' ? vacio.photo = e.target.photo.value : editHotel.photo=e.target.photo.value
-        
+
         axios.patch(`${URL}/hotels/${id}`, editHotel)
             .then(res => {
                 if(res.data.success){
@@ -37,10 +37,10 @@ export function EditCard({id}) {
                     notify(error)
                     notify(error1)
                 }
-                
+
             })
     }
-  return (
+return (
     <div >
         <form className='container-forms-byhotel' onSubmit={submit}>
             <label className=''>
@@ -54,7 +54,7 @@ export function EditCard({id}) {
             <input className=''  type='url' name="photo" placeholder='image'/>
             </label>
             <div className=''>
-            <button className='button'><span class="button_top">Edit</span></button>
+            <button className=''><span class="button_top">Edit</span></button>
             </div>
         </form>
     </div>
