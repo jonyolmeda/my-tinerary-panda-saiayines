@@ -30,6 +30,8 @@ const getFilteredCities = createAsyncThunk('getFilteredCities', async(filter) =>
         }
     }
 })
+
+
 const cityAction = {
     getCities,
     getFilteredCities
