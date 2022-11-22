@@ -20,48 +20,67 @@ const dataCity ={
           photo: photoRef.current.value,
           userId: userIdRef.current.value
       }
-    try{
-    let res = axios.post(`${URL}/cities/`, dataCity)
-    let res2 = await axios.get(`${URL}/cities/`)
-    let cityCreated = res2.data.response
-        if (res.data.success) {
-          let timerInterval
-          Swal.fire({
-            title: 'Auto close alert!',
-            html: 'I will close in <b></b> milliseconds.',
-            timer: 2000,
-            timerProgressBar: true,
-            didOpen: () => {
-              Swal.showLoading()
-              const b = Swal.getHtmlContainer().querySelector('b')
-              timerInterval = setInterval(() => {
-                b.textContent = Swal.getTimerLeft()
-              }, 100)
-            },
-            willClose: () => {
-              clearInterval(timerInterval)
-              cityCreated.filter(e => e.name === dataCity.name).map(e => window.location.href = `/detailCity/${e._id}`)
-            }
-          }).then((result) => {
-            if (result.dismiss === Swal.DismissReason.timer) {
-              console.log('I was closed by the timer')
-            }
-          })}else {
+      try{
+        let res = await axios.post(`${URL}/cities`, dataCity)
+        let res2 = await axios.get(`${URL}/cities`)
+        let hotelCreated = res2.data.response
+        if(res.data.success){
+            let timerInterval
             Swal.fire({
-              title: "Warning!",
-              text: res.data.message.join(' '),
-              icon: "Error",
-            });
-          }
-        }catch(error){
-          console.log(error);
+              title: 'Hotel was Created succesfully!',
+              html: 'Redirecting to that page in <b></b> miliseconds.',
+              timer: 2500,
+              timerProgressBar: true,
+              didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                  b.textContent = Swal.getTimerLeft()
+                }, 100)
+              },
+              willClose: () => {
+                clearInterval(timerInterval)
+                hotelCreated.filter(e => e.name === dataCity.name).map(e => window.location.href = `/detailCity/${e._id}`)
+              }
+            }).then((result) => {
+              /* Read more about handling dismissals below */
+              if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer')
+              }
+            })
         }
-   
+        else{
+            Swal.fire({
+                icon: 'error',
+                title: 'We found an error...',
+                text: `Errors: ${res.data.message.join(', ')}`,
+              })
+        }
+    }catch(err){
+        if(err.response.data.message === `hotels validation failed: userId: Cast to ObjectId failed for value "${dataCity.userId}" (type string) at path "userId" because of "BSONTypeError"`){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error 404',
+                text: 'User ID is invalid. Please try again!',
+              })
+        }else if(err.response.data.message === `hotels validation failed: citiId: Cast to ObjectId failed for value "${dataCity.citiId}" (type string) at path "citiId" because of "BSONTypeError"`){
+            Swal.fire({
+                icon: 'error',
+                title: 'Error 404',
+                text: 'City ID is invalid. Please try again!',
+              })
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Error 404',
+                text: 'User ID and City ID are invalid. Please try again!',
+              })
+        }
+    }
 }
   return (
 
     <div className='.container-newcity'>
-      <form onSubmit={submit}>
       <label >
         City name:
         <input className='inputin' type='text' id='nameInput' ref={nameRef} />
@@ -83,9 +102,8 @@ const dataCity ={
         <input className='inputin' type='text' id='emailInput' ref={userIdRef}  />
       </label>
       <div className='container-submit'>
-        <button className="submit" type='submit'> Create </button>
+      <input onClick={submit} className="submit" type='submit'/>
       </div>
-      </form>
     </div>
   )
  } 
