@@ -54,7 +54,7 @@ export function EditCard({id}) {
             <input className=''  type='url' name="photo" placeholder='image'/>
             </label>
             <div className=''>
-            <button className='button'><span class="button_top">Edit</span></button>
+            <button className=''><span class="button_top">Edit</span></button>
             </div>
         </form>
     </div>

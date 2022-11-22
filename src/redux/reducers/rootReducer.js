@@ -7,6 +7,6 @@ const rootReducer = {
     cityReducer,
     CityFilterReducer,
     hotelReducer,
-    hotelByUser
+    hotelByUser,
 }
 export default rootReducer;
