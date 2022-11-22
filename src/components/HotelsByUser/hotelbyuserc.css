@@ -1,0 +1,29 @@
+.container-cards-hotelsby{
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-evenly;
+    display: flex;
+    margin: 10px;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    flex-wrap: wrap;
+}
+
+.contenedor-principal-hotelsby{
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    background-image: url(/public/images/353018.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-principal{
+    color:white;
+    text-shadow: black;
+}
