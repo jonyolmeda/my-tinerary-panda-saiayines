@@ -42,7 +42,7 @@ export function EditCard({id}) {
     }
 return (
     <div >
-        <form className='container-forms-byhotel' onSubmit={submit}>
+        <form className='container-forms-byshow' onSubmit={submit}>
             <label className=''>
             <p>Hotel Name</p>
             <input className='' type="text" name='name' min='3' placeholder=' name...'/></label>
@@ -54,7 +54,7 @@ return (
             <input className=''  type='url' name="photo" placeholder='image'/>
             </label>
             <div className=''>
-            <button className=''><span class="button_top">Edit</span></button>
+            <button className=''><span class="button_editshows">Edit</span></button>
             </div>
         </form>
     </div>
