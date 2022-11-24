@@ -2,8 +2,8 @@ import {  createAsyncThunk} from "@reduxjs/toolkit";
 import { URL } from "../../api/url";
 import axios from "axios";
 
-const deleteShow = createAsyncThunk("deleteShow", async (id) => {
-    let url = `${URL}/shows/${id}`;
+const deleteItinerary = createAsyncThunk("deleteItinerary", async (id) => {
+    let url = `${URL}/itineraries/${id}`;
     try {
       await axios.delete(url);
       return {
@@ -15,8 +15,8 @@ const deleteShow = createAsyncThunk("deleteShow", async (id) => {
       };
     }
   });
-const myShowAction ={
-    deleteShow
+const myItineraryAction ={
+    deleteItinerary
 }
 
-export default myShowAction;
+export default myItineraryAction;
