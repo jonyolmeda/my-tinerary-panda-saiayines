@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
-import './cardshows.css'
-import {EditCardShows} from './EditCardShows'
+import '../myShows/cardshows.css'
+import {EditCardItineraries} from './EditCardItineraries'
 import { useDispatch } from "react-redux";
-import myShowAction from '../../redux/actions/myShowsAction'
+import myItineraryAction from '../../redux/actions/myItineraryAction'
 import Swal from "sweetalert2";
 
-export default function CardShows(props) {
+export default function ItinerariesCards(props) {
     let {name, description, photo, price,id} = props
     let [push,setPush]= useState(false)
 
@@ -23,7 +23,7 @@ const dispatch = useDispatch()
       if (result.isConfirmed) {
         Swal.fire(
             'Deleted!',
-            dispatch(myShowAction.deleteShow(e)),
+            dispatch(myItineraryAction.deleteItinerary(e)),
           'Your file has been deleted.',
         )
       }
@@ -32,8 +32,8 @@ const dispatch = useDispatch()
     return (
           <>
       <div class='container-main-cards-and-edit'>
-      <div class="card-shows">
-        <img className='' src={photo} alt={name} height="250" />
+      <div class="card-shows-iti">
+        <img className='card-image-iti' src={photo} alt={name} />
         <div classname='cotenedor-principal-showsby'>
         <h4>{name}</h4>
         <p>Description: {description}</p>
@@ -45,11 +45,9 @@ const dispatch = useDispatch()
         </div>
         </div>
          <div class='container-edit-shows'>
-         {push?(<EditCardShows id={id} />): ''}
+         {push?(<EditCardItineraries id={id} />): ''}
          </div>
          </div>
           </>
     )
 }
-
-

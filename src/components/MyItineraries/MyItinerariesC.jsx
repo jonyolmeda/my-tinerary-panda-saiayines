@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import './myshows.css'
+import '../myShows/myshows.css'
 import axios from "axios";
 import {URL} from "../../api/url";
-import CardShows from "./CardShows";
+import ItinerariesCards from "./ItinerariesCards";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
-import myShowAction from '../../redux/actions/myShowsAction'
+import myItineraryAction from '../../redux/actions/myItineraryAction'
 
-export default function MyShowsC() {
-    let [hotel, setHotel] = useState([]);
+export default function MyItinerariesC() {
+    let [city, setCity] = useState([]);
 
     useEffect(() => {
-        console.log(hotel);
+        console.log(city);
         axios
-            .get(`${URL}/showsBy?userId=636d51715d29e99d62636bd7`)
-            .then((res) => setHotel(res.data.response))
+            .get(`${URL}/itinerariesBy?userId=636d51715d29e99d62636bda`)
+            .then((res) => setCity(res.data.response))
             .catch((err) => err.message);
             
     }, []);
@@ -33,7 +33,7 @@ export default function MyShowsC() {
         if (result.isConfirmed) {
           Swal.fire(
               'Deleted!',
-              dispatch(myShowAction.deleteShow(e)),
+              dispatch(myItineraryAction.deleteItinerary(e)),
             'Your file has been deleted.',
           )
         }
@@ -47,7 +47,7 @@ export default function MyShowsC() {
                 <h3 className="text-main-shows">My Shows</h3>
             </div>
             <div className= 'container-cards-showsBy'>
-            {hotel.length > 0 ? hotel.map((show) => <CardShows name={show.name}  erase={deleteIt} photo={show.photo[0]} key={show._id} id={show._id} price={show.price} description={show.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
+            {city.length > 0 ? city.map((itinerary) => <ItinerariesCards name={itinerary.name}  erase={deleteIt} photo={itinerary.photo[0]} key={itinerary._id} id={itinerary._id} price={itinerary.price} description={itinerary.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
             </div>
         </div>
     );

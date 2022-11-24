@@ -1,7 +1,7 @@
 .contenedor-principal-showsby{
     width: 100%;
     min-height: 70vh;
-    background-image: url('https://p4.wallpaperbetter.com/wallpaper/146/867/628/luxury-hotel-wallpaper-preview.jpg');
+    background-image: url('https://www.todofondos.net/wp-content/uploads/2560x1600-Naturaleza-paisaje-fondo-de-pantalla-de-Noruega-HD-escritorio-y-fondo-movil.jpg');
     background-repeat: none;
     background-size: cover;
     gap: 0.5rem;
@@ -21,4 +21,42 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 0.5rem;
+}
+.card-image-iti{
+    height: 200px;
+    width: 400px;
+}
+.card-shows-iti{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 650px;
+    height: 500px;
+    background-color: #020122;
+    color: white;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+    border-width: 4px;
+}
+@media screen and (max-width: 700px){
+    .card-shows-iti{
+        width: 550px;
+    }   
+}
+
+@media screen and (max-width: 580px){
+    .card-shows-iti{
+        width: 450px;
+    }   
+}
+
+@media screen and (max-width: 470px){
+    .card-shows-iti{
+        width: 350px;
+    }   
+    .card-image-iti{
+        height: 150px;
+        width: 300px;
+    }
 }
