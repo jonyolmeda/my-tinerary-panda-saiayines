@@ -8,6 +8,7 @@
     border-bottom: #ffffff solid 1px;
     background-color: transparent;
     color: white;
+    width: -webkit-fill-available;
 }
 .submit{
     width: 75px;
@@ -34,4 +35,5 @@ height: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2em;
 }
