@@ -29,20 +29,22 @@ const dispatch = useDispatch()
     })
 }
     return (
-        <div>
-        <div className='contenedor-cardHotelsBy'>
+        <div class='container-main-cards-and-edit'>
+        <div className='card-shows'>
             <img className='' src={photo} alt={name} height="250" />
             <div classname='cotenedor-principal-cardhotelsby'>
                 <h4>{name}</h4>
                 <p>capacity: {capacity}</p>
-                <div className='buttons-hotels-by'>
-                <button className='button-byhotel' value={id}  onClick={()=>setPush(!push)}><span class="button_top">Edit</span></button>
-                <button className='button-byhotel' value={id} onClick={e=> deleteIt(id)}>Delete</button>
+                <div className='buttons-shows-by'>
+                <button className='button-byShows-edit' value={id}  onClick={()=>setPush(!push)}><span class="button_top">Edit</span></button>
+                <button className='button-byShows-delete' value={id} onClick={e=> deleteIt(id)}>Delete</button>
                 </div>
 
             </div>
         </div>
+        <div class='container-edit-shows'>
         {push?(<EditCard id={id} />): ''}
+        </div>
         </div>
     )
 }

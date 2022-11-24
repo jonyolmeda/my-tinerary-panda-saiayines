@@ -1,0 +1,43 @@
+.container-forms-byshow{
+    width: 650px;
+    height: 250px;
+    background-color: rgb(5, 5, 22);
+    color: white;
+    border-radius: 15px;
+    border-width: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.button_editshows{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 153, 0, 0.904);
+    border-radius: 0.5rem;
+    font-weight:bolder;
+    font-size: 1rem;
+}
+@media screen and (max-width: 700px){
+    .container-forms-byshow{
+        width: 550px;
+    }   
+}
+
+@media screen and (max-width: 580px){
+    .container-forms-byshow{
+        width: 450px;
+    }   
+}
+
+@media screen and (max-width: 470px){
+    .container-forms-byshow{
+        width: 350px;
+    }   
+}
