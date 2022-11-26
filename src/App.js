@@ -10,7 +10,10 @@ import NewCity from "./pages/NewCity/NewCity";
 import NewHotel from "./pages/NewHotel/NewHotel";
 import CityDetails from "./pages/CityDetails/CityDetails"
 import HotelDetail from "./pages/HotelDetails/HotelDetail"
-
+import MyCities from "./pages/MyCities/MyCities";
+import HotelsByUser from "./pages/HotelsByUser/HotelsByUser"
+import MyShows from "./pages/MyShows/MyShows"
+import MyItineraries from "./pages/MyItineraries/MyItineraries"
 
 function App() {
   return (<>
@@ -24,6 +27,10 @@ function App() {
     <Route path='/newhotel' element={<NewHotel/>}/>
     <Route path='/detailCity/:cityId' element={<CityDetails/>}/>
     <Route path='/detailHotel/:id' element={<HotelDetail/>}/>
+    <Route path="/mycities" element={<MyCities/>}/>
+    <Route path="/hotelByUser" element={<HotelsByUser/>}/>
+    <Route path="/myshows" element={<MyShows/>}/>
+    <Route path="/myitineraries" element={<MyItineraries/>}/>
     <Route path='*' element={<NotFound/>}/>   
   </Routes> 
   </>

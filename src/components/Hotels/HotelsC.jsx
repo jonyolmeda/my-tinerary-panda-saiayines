@@ -1,30 +1,31 @@
 import {React, useState,useEffect} from 'react'
 import './hotelsc.css'
 import HotelCard from '../HotelCard/HotelCard'
-import axios from 'axios'
-import { URL } from '../../api/url'
-
+import { useSelector, useDispatch } from 'react-redux'
+import hotelAction from '../../redux/actions/hotelAction'
 
 export default function HotelsC() {
-  let [hotels,setHotels]= useState([])
+  const hotels = useSelector(store=> store.hotelReducer.hotel)
   let [select,setSelect]= useState('')
   let [search, setSearch] = useState('')
+  let dispatch = useDispatch()
 
   useEffect(()=>{
+    dispatch(hotelAction.getHotels())
     // eslint-disable-next-line
-    axios.get(`${URL}/hotels`)
-        .then(res => setHotels(res.data.response))
 },[])
 
 useEffect(()=>{
-  // eslint-disable-next-line
   if(select === 'select'){
-    axios.get(`${URL}/hotels?name=${search}`)
-  .then(res => setHotels(res.data.response))
+    dispatch(hotelAction.getHotelsBySearch(search))
   }else{
-    axios.get(`${URL}/hotels?name=${search}&order=${select}`)
-  .then(res => setHotels(res.data.response))
+    let filter ={
+      name:search,
+      order: select
+    }
+    dispatch(hotelAction.getHotelCross(filter))
   }
+  // eslint-disable-next-line
 },[search,select])
 
 
