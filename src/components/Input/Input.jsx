@@ -25,7 +25,7 @@ export default function Input() {
         }
     
     try{
-      let res = await axios.post(`${URL}/user`, userValue)
+      let res = await axios.post(`${URL}/auth`, userValue)
       console.log(res);
       if(res.data.success){
           Swal.fire({
