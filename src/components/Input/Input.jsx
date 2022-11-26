@@ -46,7 +46,7 @@ export default function Input() {
           Swal.fire({
               icon: 'error',
               title: 'Error, the user email, it´s already exist',
-              text: err.message,
+              text: 'Try again with a new email.',
             })     
   }
 }
