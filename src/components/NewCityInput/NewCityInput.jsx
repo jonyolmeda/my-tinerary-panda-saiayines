@@ -29,7 +29,7 @@ const dataCity ={
             Swal.fire({
               title: 'Hotel was Created succesfully!',
               html: 'Redirecting to that page in <b></b> miliseconds.',
-              timer: 2500,
+              timer: 500,
               timerProgressBar: true,
               didOpen: () => {
                 Swal.showLoading()
