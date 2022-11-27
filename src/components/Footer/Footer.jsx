@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.css'
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import { Link as NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,8 +10,16 @@ export default function Footer() {
         <img className="logo-navbar" src="/images/logonuevosf.png" alt="logo" />
       </div>
       <div className="contenedor-boton">
-        <a href="/cities" className="boton">CITIES</a>
-        <a href="/hotels" className="boton">HOTELS & CASINOS</a>
+      <NavLink class='navlink-footer' to="/cities">
+            <li>
+              <a href="-" className="boton-nav">CITIES</a>
+            </li>
+        </NavLink>
+        <NavLink class='navlink-footer' to="/hotels">
+            <li>
+              <a href="-" className="boton-nav">HOTELS & CASINOS</a>
+            </li>
+        </NavLink>
        </div>
 
        <div className='contenedor-github'>
