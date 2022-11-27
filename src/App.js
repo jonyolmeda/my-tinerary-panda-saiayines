@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import Home from "./pages/home/Home";
 import "./App.css";
 import NotFound from "./pages/NotFound/NotFound";
@@ -14,8 +15,15 @@ import MyCities from "./pages/MyCities/MyCities";
 import HotelsByUser from "./pages/HotelsByUser/HotelsByUser"
 import MyShows from "./pages/MyShows/MyShows"
 import MyItineraries from "./pages/MyItineraries/MyItineraries"
+import ProtectedRoute from "./components/ProtectedRoute"
 
 function App() {
+  let user = useSelector((store) => store.loginInReducer)
+  let logged = user.token
+  let role = user.token
+  let admin = role.role === "admin"
+  console.log(admin)
+
   return (<>
   <Routes>
     <Route path='/' element={<Home/>}/> 
@@ -23,14 +31,16 @@ function App() {
     <Route path='/hotels' element={<Hotels/>}/>
     <Route path='/signup' element={<SignUp/>}/> 
     <Route path='/signin' element={<SignIn/>}/>
-    <Route path='/newcity' element={<NewCity/>}/>
-    <Route path='/newhotel' element={<NewHotel/>}/>
     <Route path='/detailCity/:cityId' element={<CityDetails/>}/>
     <Route path='/detailHotel/:id' element={<HotelDetail/>}/>
-    <Route path="/mycities" element={<MyCities/>}/>
-    <Route path="/hotelByUser" element={<HotelsByUser/>}/>
     <Route path="/myshows" element={<MyShows/>}/>
     <Route path="/myitineraries" element={<MyItineraries/>}/>
+    <Route element={<ProtectedRoute isAllowed={!!admin} reDirect='/'/>}>
+        <Route path="/mycities" element={<MyCities/>}/>
+        <Route path="/hotelByUser" element={<HotelsByUser/>}/>
+        <Route path='/newcity' element={<NewCity/>}/>
+        <Route path='/newhotel' element={<NewHotel/>}/>
+    </Route>
     <Route path='*' element={<NotFound/>}/>   
   </Routes> 
   </>

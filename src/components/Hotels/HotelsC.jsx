@@ -46,7 +46,7 @@ let bySearch = (e)=>{
             <option value="desc">Descendent</option>
         </select>
          <input onChange={bySearch} className='input-search' id='search' type="search" placeholder='Search Hotels...' />
-         <a className='add-city' href="/newhotel">Add new hotel/casino</a>
+        
          </div>
       <div className='container-cards'>
         { hotels.length > 0 ?
