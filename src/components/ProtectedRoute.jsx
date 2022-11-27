@@ -10,3 +10,4 @@ const ProtectedRoute = ({isAllowed,children,reDirect}) => {
 
 
 export default  ProtectedRoute
+
