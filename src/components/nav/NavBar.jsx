@@ -50,11 +50,6 @@ export default function NavBar() {
               <a href="-">New City</a>
             </li>
             </NavLink>
-            <NavLink to="/newshow">
-            <li>
-              <a href="-">New Shows</a>
-            </li>
-            </NavLink>
             <NavLink to="/hotelByUser">
             <li> 
               <a href="-">Hotels User</a>
@@ -65,17 +60,11 @@ export default function NavBar() {
               <a href="-">Citys User</a>
             </li>
             </NavLink>
-            <NavLink to="/myshows">
-            <li>
-              <a href="-">Shows User</a>
-            </li>
-            </NavLink>
             <NavLink to="/profile">
             <li>
               <a href="-">My Profile</a>
             </li>
             </NavLink>
-            
           </ul>
         </ul>
       </div>

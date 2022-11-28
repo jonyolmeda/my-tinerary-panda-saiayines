@@ -4,15 +4,18 @@ import { URL } from "../../api/url";
 import CardUser from "../CardUser/CardUser";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import './mycitiesc.css'
+
 
 export default function MyCitiesC() {
   let [city, setCity] = useState([]);
+  let token = useSelector((store) => store.loginInReducer.token)
   let navigate = useNavigate();
   useEffect(() => {
     console.log(city);
     axios
-      .get(`${URL}/citiesBy?userId=636d51715d29e99d62636bd8`)
+      .get(`${URL}/citiesBy?userId=${token.id}`)
       .then((res) => setCity(res.data.response))
       .catch((err) => err.message);
   }, []);
