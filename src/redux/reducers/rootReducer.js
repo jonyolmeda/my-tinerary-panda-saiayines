@@ -16,5 +16,6 @@ const rootReducer = {
     myShowReduce,
     myItineraryReducer,
     loginInReducer,
+    
 }
 export default rootReducer;

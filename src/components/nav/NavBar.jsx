@@ -60,6 +60,11 @@ export default function NavBar() {
               <a href="-">Citys User</a>
             </li>
             </NavLink>
+            <NavLink to="/profile">
+            <li>
+              <a href="-">My Profile</a>
+            </li>
+            </NavLink>
           </ul>
         </ul>
       </div>
