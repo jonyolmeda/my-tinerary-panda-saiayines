@@ -19,7 +19,11 @@ export function EditCardShows({id}) {
         price: price,
       };
   
-      axios.patch(`${URL}/shows/${id}`, editShow).then((res) => {
+      axios.patch(`${URL}/shows/${id}`, editShow, { 
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }).then((res) => {
         if (res.data.success) {
           Swal.fire({
             title: "Success",
