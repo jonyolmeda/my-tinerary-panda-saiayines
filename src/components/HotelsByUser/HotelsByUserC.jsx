@@ -15,7 +15,11 @@ export default function HotelsByUserC() {
     useEffect(() => {
         console.log(hotel);
         axios
-            .get(`${URL}/hotelsBy?userId=${token.id}`)
+            .get(`${URL}/hotelsBy?userId=${token.id}`, { 
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            })
             .then((res) => setHotel(res.data.response))
             .catch((err) => err.message);
     }, []);

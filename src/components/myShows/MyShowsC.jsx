@@ -13,7 +13,11 @@ export default function MyShowsC() {
     let token = useSelector((store) => store.loginInReducer.token)
     useEffect(() => {
       axios
-        .get(`${URL}/showsBy?userId=${token.id}`)
+        .get(`${URL}/showsBy?userId=${token.id}`, { 
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
         .then((res) => setShow(res.data.response))
         .catch((err) => err.message);
     }, []);
