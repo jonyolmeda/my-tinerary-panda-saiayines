@@ -16,6 +16,8 @@ import HotelsByUser from "./pages/HotelsByUser/HotelsByUser"
 import MyShows from "./pages/MyShows/MyShows"
 import MyItineraries from "./pages/MyItineraries/MyItineraries"
 import ProtectedRoute from "./components/ProtectedRoute"
+import Profile from './pages/Profile/Profile'
+import EditProfileUser from './pages/EditProfile/EditProfileUser'
 
 function App() {
   let user = useSelector((store) => store.loginInReducer)
@@ -33,9 +35,12 @@ function App() {
     <Route path='/signin' element={<SignIn/>}/>
     <Route path='/detailCity/:cityId' element={<CityDetails/>}/>
     <Route path='/detailHotel/:id' element={<HotelDetail/>}/>
+    <Route path='*' element={<NotFound/>}/>   
     <Route element={<ProtectedRoute isAllowed={!!logged} reDirect={"/signin"} />}>
             <Route path="/myitineraries" element={<MyItineraries/>}/>
             <Route path="/myshows" element={<MyShows/>}/>
+            <Route path='/profile' element={<Profile/>}/> 
+            <Route path='/profileEdit' element={<EditProfileUser/>}/>  
     </Route>
     <Route element={<ProtectedRoute isAllowed={!!admin} reDirect='/'/>}>
         <Route path="/mycities" element={<MyCities/>}/>
@@ -43,7 +48,6 @@ function App() {
         <Route path='/newcity' element={<NewCity/>}/>
         <Route path='/newhotel' element={<NewHotel/>}/>
     </Route>
-    <Route path='*' element={<NotFound/>}/>   
   </Routes> 
   </>
   )
