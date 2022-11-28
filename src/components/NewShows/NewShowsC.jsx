@@ -81,7 +81,7 @@ export default function NewShowsC() {
       </label>
       <label >
         Photo:
-        <input className='inputin-show' type='number' id='photoInput' ref={photo}  />
+        <input className='inputin-show' type='text' id='photoInput' ref={photo}  />
       </label>
       <label >
         Price:
