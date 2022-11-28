@@ -50,6 +50,21 @@ export default function NavBar() {
               <a href="-">New City</a>
             </li>
             </NavLink>
+            <NavLink to="/newitinerary">
+            <li>
+              <a href="-">New Itineraries</a>
+            </li>
+            </NavLink>
+            <NavLink to="/newshow">
+            <li>
+              <a href="-">New shows</a>
+            </li>
+            </NavLink>
+            <NavLink to="/myshows">
+            <li>
+              <a href="-">Shows User</a>
+            </li>
+            </NavLink>
             <NavLink to="/hotelByUser">
             <li> 
               <a href="-">Hotels User</a>
@@ -62,9 +77,15 @@ export default function NavBar() {
             </NavLink>
             <NavLink to="/profile">
             <li>
+            <NavLink to="/myitineraries">
+            <li>
+              <a href="-">Itineraries User</a>
+            </li>
+            </NavLink>
               <a href="-">My Profile</a>
             </li>
             </NavLink>
+            
           </ul>
         </ul>
       </div>
