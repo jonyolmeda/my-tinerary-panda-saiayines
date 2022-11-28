@@ -22,7 +22,11 @@ export function EditCard({id}) {
         e.target.population.value === '' ? vacio.population = e.target.population.value : editCity.population=e.target.population.value
         e.target.photo.value === '' ? vacio.photo = e.target.photo.value : editCity.photo=e.target.photo.value
         
-        axios.put(`${URL}/cities/${id}`, editCity)
+        axios.put(`${URL}/cities/${id}`, editCity, { 
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
             .then(res => {
                 if(res.data.success){
                     Swal.fire({

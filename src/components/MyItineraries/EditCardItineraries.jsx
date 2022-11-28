@@ -19,7 +19,12 @@ export function EditCardItineraries({id}) {
         price: price,
       };
   
-      axios.put(`${URL}/itineraries/${id}`, editItinerary).then((res) => {
+      axios.put(`${URL}/itineraries/${id}`, editItinerary, { 
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
         if (res.data.success) {
           Swal.fire({
             title: "Success",

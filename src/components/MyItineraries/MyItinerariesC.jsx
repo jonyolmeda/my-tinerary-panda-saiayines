@@ -14,7 +14,11 @@ export default function MyItinerariesC() {
     useEffect(() => {
         console.log(itinerary);
         axios
-            .get(`${URL}/itinerariesBy?userId=${token.id}`)
+            .get(`${URL}/itinerariesBy?userId=${token.id}`, { 
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            })
             .then((res) => setItinerary(res.data.response))
             .catch((err) => err.message);
             
