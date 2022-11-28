@@ -19,7 +19,11 @@ export const CitiesC = () => {
 
 
   useEffect(() => {
-    axios.get(`${URL}/cities`)
+    axios.get(`${URL}/cities`, { 
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
     .then(res => setCheckCities(res.data.response))
     .catch(err => console.log(err.message))
 }, [])
