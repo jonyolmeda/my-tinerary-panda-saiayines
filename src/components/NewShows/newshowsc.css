@@ -1,23 +1,15 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.form-new-shows{
-    display:flex;
-    flex-direction: column;
-    width: 80%;
-    height: 500px;
-    background-color: #8B95C9;
+.contenedor-form{
+    background: url('https://www.creativosonline.org/wp-content/uploads/2014/07/apple-travel-island-full-hd-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin: 40px;
-    border-radius: 10px;
+    width: 100%;
+    align-items: start;
+    flex-wrap: wrap;
 }
 
-.inputin-show{
+.inputin{
     border: none;
     border-bottom: #000000 solid 1px;
     background-color: transparent;
@@ -25,7 +17,7 @@
 }
 .submit-show{
     width: 75px;
-    height: 200px;
+    height: 100%;
     background-color: #8B95C9;
     font-size: 1rem;
     color: #020122;
@@ -34,14 +26,12 @@
     text-decoration: none;
 }
 
-.container-submit-show{
+.container-submit{
 display: flex;
 width: 100%;
 justify-content: center;
 align-items: center;
-height: 50px;
-align-items: center;
-
+height: 8%;
 }
 .container-newcity{
     background: rgb(51,181,184);

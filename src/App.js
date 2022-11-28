@@ -18,6 +18,7 @@ import MyItineraries from "./pages/MyItineraries/MyItineraries"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Profile from './pages/Profile/Profile'
 import EditProfileUser from './pages/EditProfile/EditProfileUser'
+import NewShows from "./pages/NewShows/NewShows";
 
 function App() {
   let user = useSelector((store) => store.loginInReducer)
@@ -47,6 +48,7 @@ function App() {
         <Route path="/hotelByUser" element={<HotelsByUser/>}/>
         <Route path='/newcity' element={<NewCity/>}/>
         <Route path='/newhotel' element={<NewHotel/>}/>
+        <Route path='/newshow' element={<NewShows/>}/>
     </Route>
   </Routes> 
   </>
