@@ -6,17 +6,16 @@ import CardShows from "./CardShows";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import myShowAction from '../../redux/actions/myShowsAction'
+import { useSelector } from 'react-redux';
 
 export default function MyShowsC() {
-    let [hotel, setHotel] = useState([]);
-
+    let [show, setShow] = useState([]);
+    let token = useSelector((store) => store.loginInReducer.token)
     useEffect(() => {
-        console.log(hotel);
-        axios
-            .get(`${URL}/showsBy?userId=636d51715d29e99d62636bd7`)
-            .then((res) => setHotel(res.data.response))
-            .catch((err) => err.message);
-            
+      axios
+        .get(`${URL}/showsBy?userId=${token.id}`)
+        .then((res) => setShow(res.data.response))
+        .catch((err) => err.message);
     }, []);
 
     const dispatch = useDispatch()
@@ -47,7 +46,7 @@ export default function MyShowsC() {
                 <h3 className="text-main-shows">My Shows</h3>
             </div>
             <div className= 'container-cards-showsBy'>
-            {hotel.length > 0 ? hotel.map((show) => <CardShows name={show.name}  erase={deleteIt} photo={show.photo[0]} key={show._id} id={show._id} price={show.price} description={show.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
+            {show.length > 0 ? show.map((show) => <CardShows name={show.name}  erase={deleteIt} photo={show.photo[0]} key={show._id} id={show._id} price={show.price} description={show.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
             </div>
         </div>
     );
