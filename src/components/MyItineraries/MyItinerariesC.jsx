@@ -6,15 +6,16 @@ import ItinerariesCards from "./ItinerariesCards";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import myItineraryAction from '../../redux/actions/myItineraryAction'
+import { useSelector } from 'react-redux';
 
 export default function MyItinerariesC() {
-    let [city, setCity] = useState([]);
-
+    let [itinerary, setItinerary] = useState([]);
+    let token = useSelector((store) => store.loginInReducer.token)
     useEffect(() => {
-        console.log(city);
+        console.log(itinerary);
         axios
-            .get(`${URL}/itinerariesBy?userId=636d51715d29e99d62636bda`)
-            .then((res) => setCity(res.data.response))
+            .get(`${URL}/itinerariesBy?userId=${token.id}`)
+            .then((res) => setItinerary(res.data.response))
             .catch((err) => err.message);
             
     }, []);
@@ -44,10 +45,10 @@ export default function MyItinerariesC() {
     return (
         <div className="contenedor-principal-showsby">
             <div className="w-100">
-                <h3 className="text-main-shows">My Shows</h3>
+                <h3 className="text-main-shows">My Itineraries</h3>
             </div>
             <div className= 'container-cards-showsBy'>
-            {city.length > 0 ? city.map((itinerary) => <ItinerariesCards name={itinerary.name}  erase={deleteIt} photo={itinerary.photo[0]} key={itinerary._id} id={itinerary._id} price={itinerary.price} description={itinerary.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
+            {itinerary.length > 0 ? itinerary.map((itinerary) => <ItinerariesCards name={itinerary.name}  erase={deleteIt} photo={itinerary.photo[0]} key={itinerary._id} id={itinerary._id} price={itinerary.price} description={itinerary.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
             </div>
         </div>
     );
