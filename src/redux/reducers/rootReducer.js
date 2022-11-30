@@ -7,6 +7,7 @@ import myShowReduce from './myShowReducer'
 import myItineraryReducer from './myItineraryReducer'
 import loginInReducer from './loginInReducer'
 
+
 const rootReducer = {
     cityReducer,
     CityFilterReducer,
@@ -15,7 +16,6 @@ const rootReducer = {
     cityByUser,
     myShowReduce,
     myItineraryReducer,
-    loginInReducer,
-    
+    loginInReducer
 }
 export default rootReducer;
