@@ -56,9 +56,9 @@ async function saveData(e) {
         <input
           className="inputin"
           type="email"
-          id="nameInput"
+          id="emailSignIn"
           ref={emailRef}
-          require
+          required
         />
       </label>
       <label>
@@ -66,7 +66,7 @@ async function saveData(e) {
         <input
           className="inputin"
           type="password"
-          id="nameInput"
+          id="passSignIn"
           ref={passwordRef}
           required
         />

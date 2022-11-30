@@ -13,7 +13,11 @@ export default function Profile({name,photo,age,email,role,id}) {
   useEffect(() => {
       return async function fetchdata() {
           await axios.get(`${URL}/auth/me/${token.id}
-          `).then(res => {
+          `,{ 
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }).then(res => {
               let userdata = res.data.response
               setUser(userdata)
           })

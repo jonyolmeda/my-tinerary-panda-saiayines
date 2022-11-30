@@ -26,6 +26,8 @@
     outline: none;
     width: 150px;
     height: 50px;
+    display: flex;
+    align-items: flex-end;
   }
   
   .submit:hover {
@@ -47,9 +49,10 @@ align-items: center;
 height: 8%;
 padding-top: 2rem;
 }
-.container-newhotel{
-    background: rgb(51,181,184);
-    background: linear-gradient(180deg, rgba(51,181,184,1) 17%, rgba(245,201,155,1) 89%);
+.container-newhotel{   
+   background: url('https://www.creativosonline.org/wp-content/uploads/2014/07/apple-travel-island-full-hd-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
     width: 100%;
     display: flex;
     flex-direction: column;

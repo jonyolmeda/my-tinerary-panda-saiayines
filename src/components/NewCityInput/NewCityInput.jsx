@@ -1,15 +1,19 @@
-import { React, useRef } from 'react'
+import { React, useRef, useEffect, useState } from 'react'
 import './newcityinput.css'
 import axios from 'axios'
 import { URL } from '../../api/url'
 import Swal from 'sweetalert2';
+import { useSelector } from 'react-redux'
+import { useNavigate } from "react-router-dom";
 
 export default function NewCityInput() {
+  let token = useSelector((store) => store.loginInReducer.token);
   const nameRef = useRef()
   const continentRef = useRef()
   const populationRef = useRef()
   const photoRef = useRef()
-  const userIdRef = useRef()
+  const userIdRef = useRef(token.id)
+  const navigate = useNavigate();
 
 async function submit (e) {
   e.preventDefault()
@@ -18,10 +22,14 @@ const dataCity ={
           continent: continentRef.current.value,
           population: populationRef.current.value,
           photo: photoRef.current.value,
-          userId: userIdRef.current.value
+          userId: userIdRef.current
       }
       try{
-        let res = await axios.post(`${URL}/cities`, dataCity)
+        let res = await axios.post(`${URL}/cities`, dataCity, { 
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
         let res2 = await axios.get(`${URL}/cities`)
         let hotelCreated = res2.data.response
         if(res.data.success){
@@ -40,10 +48,9 @@ const dataCity ={
               },
               willClose: () => {
                 clearInterval(timerInterval)
-                hotelCreated.filter(e => e.name === dataCity.name).map(e => window.location.href = `/detailCity/${e._id}`)
+                hotelCreated.filter(e => e.name === dataCity.name).map(e =>navigate(`/detailCity/${e._id}`))
               }
             }).then((result) => {
-              /* Read more about handling dismissals below */
               if (result.dismiss === Swal.DismissReason.timer) {
                 console.log('I was closed by the timer')
               }
@@ -57,13 +64,13 @@ const dataCity ={
               })
         }
     }catch(err){
-        if(err.response.data.message === `hotels validation failed: userId: Cast to ObjectId failed for value "${dataCity.userId}" (type string) at path "userId" because of "BSONTypeError"`){
+        if(err.response.data.message === `Cities validation failed: userId: Cast to ObjectId failed for value "${dataCity.userId}" (type string) at path "userId" because of "BSONTypeError"`){
             Swal.fire({
                 icon: 'error',
                 title: 'Error 404',
                 text: 'User ID is invalid. Please try again!',
               })
-        }else if(err.response.data.message === `hotels validation failed: citiId: Cast to ObjectId failed for value "${dataCity.citiId}" (type string) at path "citiId" because of "BSONTypeError"`){
+        }else if(err.response.data.message === `Cities validation failed: citiId: Cast to ObjectId failed for value "${dataCity.citiId}" (type string) at path "citiId" because of "BSONTypeError"`){
             Swal.fire({
                 icon: 'error',
                 title: 'Error 404',
@@ -97,12 +104,8 @@ const dataCity ={
         Photo:
         <input className='inputin' type='text' id='photoInput' ref={photoRef}  />
       </label>
-      <label >
-        Admin:
-        <input className='inputin' type='text' id='emailInput' ref={userIdRef}  />
-      </label>
       <div className='container-submit'>
-      <input onClick={submit} className="submit" type='submit'/>
+      <input onClick={submit} className="submit" value='Submit' type='submit '/>
       </div>
     </div>
   )

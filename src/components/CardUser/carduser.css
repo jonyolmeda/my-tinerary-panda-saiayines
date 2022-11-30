@@ -1,10 +1,6 @@
 .conteiner-cityBy-card{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display:flex;
+    flex-direction: column;
 }
 .sub-img-by{
     border-radius: 10px 0 10px 0;
@@ -12,4 +8,67 @@
     gap: 1rem;
     width: 300px;
     height: 300px;
+}
+.card2{
+    width: 650px;
+    height: 500px;
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background-color: #020122;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 0.5rem;
+}
+.card2 img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+.cotenedor-principal-citiesBy{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.buttons-cities-by{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    height: 120px;
+}
+.button-cities-edit{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 153, 0, 0.904);
+    border-radius: 0.5rem;
+    font-weight:bolder;
+    font-size: 1rem;
+}
+.button-cities-delete{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: red;
+    border-radius: 0.5rem;
+    font-weight:bolder;
+    font-size: 1rem;
 }

@@ -20,7 +20,11 @@ export default function ProfileEdit() {
   useEffect(() => {
       return async function fetchdata() {
           await axios.get(`${URL}/auth/me/${token.id}
-          `).then(res => {
+          `,{ 
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }).then(res => {
               let userdata = res.data.response
               setUser(userdata)
           })
@@ -37,7 +41,11 @@ export default function ProfileEdit() {
         email: email.current.value,
 }
 try {
-    let res = await axios.patch(`${URL}/auth/me/${token.id}`, saveData)
+    let res = await axios.patch(`${URL}/auth/me/${token.id}`, saveData, { 
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
     if (res.data.success) {
         Swal.fire({
             icon: 'success',

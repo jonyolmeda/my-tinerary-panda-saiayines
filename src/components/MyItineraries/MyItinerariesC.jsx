@@ -52,7 +52,7 @@ export default function MyItinerariesC() {
                 <h3 className="text-main-shows">My Itineraries</h3>
             </div>
             <div className= 'container-cards-showsBy'>
-            {itinerary.length > 0 ? itinerary.map((itinerary) => <ItinerariesCards name={itinerary.name}  erase={deleteIt} photo={itinerary.photo[0]} key={itinerary._id} id={itinerary._id} price={itinerary.price} description={itinerary.description} />) : <h2 className="min-h-50">Hotels not found</h2>}
+            {itinerary.length > 0 ? itinerary.map((itinerary) => <ItinerariesCards name={itinerary.name}  erase={deleteIt} photo={itinerary.photo[0]} key={itinerary._id} id={itinerary._id} price={itinerary.price} description={itinerary.description} />) : <h2 className="min-h-50">Itineraries not found</h2>}
             </div>
         </div>
     );

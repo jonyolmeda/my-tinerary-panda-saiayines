@@ -1,15 +1,32 @@
-.text-center-title{
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.text-principal{
+    text-shadow: -9px 5px 6px rgba(255, 255, 255, 0.9);
+    color: #020122;
+    font-size: 5rem;
+    margin-top: 0.5rem;
 }
 .main-container-by{
   width: 100%;
+    min-height: 70vh;
+    background-image: url('https://www.todofondos.net/wp-content/uploads/2560x1600-Naturaleza-paisaje-fondo-de-pantalla-de-Noruega-HD-escritorio-y-fondo-movil.jpg');
+    background-repeat: none;
+    background-size: cover;
+    gap: 0.5rem;
+}
+.container-cards-citiesby{
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-evenly;
   display: flex;
-  align-items: center;
+  margin: 10px;
+  color:white;
   justify-content: center;
-  flex-direction: column;
-  background-color: steelblue;
-  gap: 2rem;
+  align-items: center;
+  height: 40%;
+  flex-wrap: wrap;
+}
+.text-main-cities{
+  text-shadow: -9px 5px 6px rgba(255, 255, 255, 0.9);
+  color: #020122;
+  font-size: 5rem;
+  margin-top: 0.5rem;
 }

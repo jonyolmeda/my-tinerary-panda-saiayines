@@ -13,17 +13,16 @@
 
 .contenedor-principal-hotelsby{
     width: 100%;
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 40vh;
-    background-image: url(/public/images/353018.jpg);
-    background-repeat: no-repeat;
+    min-height: 70vh;
+    background-image: url('https://www.todofondos.net/wp-content/uploads/2560x1600-Naturaleza-paisaje-fondo-de-pantalla-de-Noruega-HD-escritorio-y-fondo-movil.jpg');
+    background-repeat: none;
     background-size: cover;
+    gap: 0.5rem;
 }
 
 .text-principal{
-    color:white;
-    text-shadow: black;
+    text-shadow: -9px 5px 6px rgba(255, 255, 255, 0.9);
+    color: #020122;
+    font-size: 5rem;
+    margin-top: 0.5rem;
 }
