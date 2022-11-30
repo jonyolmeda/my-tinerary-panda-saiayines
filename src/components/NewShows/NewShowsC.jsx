@@ -40,7 +40,11 @@ export default function NewShowsC() {
       userId: userId.current,
     };
     try {
-      let res = await axios.post(`${URL}/shows/`, dataShow);
+      let res = await axios.post(`${URL}/shows/`, dataShow,{ 
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
       if (res.data.success) {
         Swal.fire({
           title: "Show was Created succesfully!",
@@ -71,30 +75,30 @@ export default function NewShowsC() {
   return (
     <div class="contenedor-form">
       <form ref={formRef} className="form-new-shows" onSubmit={submit}>
-      <label >
+      <label className="label-form-new">
         Show name:
         <input className='inputin-show' type='text' id='nameInput' ref={name} />
       </label>
-      <label >
+      <label className="label-form-new">
         Description:
         <input className='inputin-show' type='text' id='descriptionInput' ref={description}  />
       </label>
-      <label >
+      <label className="label-form-new">
         Photo:
         <input className='inputin-show' type='text' id='photoInput' ref={photo}  />
       </label>
-      <label >
+      <label className="label-form-new">
         Price:
         <input className='inputin-show' type='number' id='priceInput' ref={price}  />
       </label>
-      <label >
+      <label className="label-form-new">
         Date:
-        <input className='inputin-show' type='date' id='emailInput' ref={date}  />
+        <input className='label-form-date' type='date' id='emailInput' ref={date}  />
       </label>
       <select
                     type="text"
                     placeholder="Hotel ID"
-                    className='form__input_show'
+                    className='form_select_show'
                     ref={hotelId}
                 >
                 <option value="">Choose an Hotel</option>
@@ -105,7 +109,7 @@ export default function NewShowsC() {
                     })}
                 </select>
       <div className='container-submit-show'>
-      <input onClick={submit} className="submit-show" type='submit'/>
+      <input onClick={submit} value='Submit' className="submit-show" type='submit'/>
       </div>
       </form>
     </div>

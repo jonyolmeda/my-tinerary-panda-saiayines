@@ -21,7 +21,7 @@ export default function NavBar() {
         </NavLink>
         <NavLink class='navlink' to="/hotels">
             <li>
-              <a href="-" className="boton-nav">HOTELS & CASINOS</a>
+              <a href="-" className="boton-nav">HOTELS</a>
             </li>
         </NavLink>
        </div>
@@ -62,26 +62,26 @@ export default function NavBar() {
             </NavLink>
             <NavLink to="/myshows">
             <li>
-              <a href="-">Shows User</a>
+              <a href="-">Shows</a>
             </li>
             </NavLink>
             <NavLink to="/hotelByUser">
             <li> 
-              <a href="-">Hotels User</a>
+              <a href="-">Hotels</a>
             </li>
             </NavLink>
             <NavLink to="/mycities">
             <li>
-              <a href="-">Citys User</a>
+              <a href="-">Cities</a>
+            </li>
+            </NavLink>
+            <NavLink to="/myitineraries">
+            <li>
+              <a href="-">Itineraries</a>
             </li>
             </NavLink>
             <NavLink to="/profile">
             <li>
-            <NavLink to="/myitineraries">
-            <li>
-              <a href="-">Itineraries User</a>
-            </li>
-            </NavLink>
               <a href="-">My Profile</a>
             </li>
             </NavLink>

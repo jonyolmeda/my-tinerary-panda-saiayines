@@ -34,18 +34,19 @@ export default function CardUser({name, photo, description,id}) {
     return (
         <div className='conteiner-cityBy-card'>
         <div className='card2'>
-            <img className='sub-img-by' src={photo} alt={name} />
-            <article className=''>
+            <img className='' src={photo} alt={name} />
+            <div className='cotenedor-principal-citiesBy'>
                 <h4 className=''>{name}</h4>
                 <p className=''>Population: {description}</p>
-                <div className=''>
-                <button className='' value={id}  onClick={()=>setPush(!push)}>Edit</button>
-                <button className='' value={id} onClick={e=> deleteIt(id)}>Delete</button>
-                </div>
-                
-            </article>
+            </div>    
+                <div className='buttons-cities-by'>
+                <button className='button-cities-edit' value={id}  onClick={()=>setPush(!push)}>Edit</button>
+                <button className='button-cities-delete' value={id} onClick={e=> deleteIt(id)}>Delete</button>
+                </div>    
         </div>
+        <div class='container-edit-cities'>
         {push?(<EditCard id={id} />): ''}
+        </div>
         </div>
     )
 }

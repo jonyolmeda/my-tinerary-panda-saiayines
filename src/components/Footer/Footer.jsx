@@ -17,7 +17,7 @@ export default function Footer() {
         </NavLink>
         <NavLink class='navlink-footer' to="/hotels">
             <li>
-              <a href="-" className="boton-nav">HOTELS & CASINOS</a>
+              <a href="-" className="boton-nav">HOTELS</a>
             </li>
         </NavLink>
        </div>

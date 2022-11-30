@@ -10,7 +10,11 @@ export default function SeeProfile() {
     let token = useSelector((store) => store.loginInReducer.token)
     useEffect(() => {
         return async function fetchdata() {
-            await axios.get(`${URL}/auth/me/${token.id}`).then(res => {
+            await axios.get(`${URL}/auth/me/${token.id}`, { 
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem("token")}`,
+                },
+              }).then(res => {
                 let userdata = res.data.response
                 setUser(userdata)
             })

@@ -71,25 +71,25 @@ export default function NewItinerariesC() {
   return (
     <div class="contenedor-form">
       <form ref={formRef} className="form-new-shows" onSubmit={submit}>
-      <label >
+      <label className="label-form-new">
         Itinerary name:
         <input className='inputin-show' type='text' id='nameInput' ref={name} />
       </label>
-      <label >
+      <label className="label-form-new">
         Description:
         <input className='inputin-show' type='text' id='descriptionInput' ref={description}  />
       </label>
-      <label >
+      <label className="label-form-new">
         Photo:
         <input className='inputin-show' type='text' id='photoInput' ref={photo}  />
       </label>
-      <label >
+      <label className="label-form-new">
         Price:
         <input className='inputin-show' type='number' id='priceInput' ref={price}  />
       </label>
-      <label >
+      <label className="label-form-new">
         Duration:
-        <input className='inputin-show' type='number' id='emailInput' ref={duration}  />
+        <input className='inputin-show' type='number' id='emailInput' value='Submit' ref={duration}  />
       </label>
       <select
                     type="text"
