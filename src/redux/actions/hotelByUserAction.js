@@ -3,9 +3,12 @@ import { URL } from "../../api/url";
 import axios from "axios";
 
 const deleteHotels = createAsyncThunk("deleteHotels", async (id) => {
-    let url = `${URL}/hotels/${id}`;
-    try {
-      await axios.delete(url);
+      try {
+      await axios.delete(`${URL}/hotels/${id}`,{ 
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
       return {
         success: true,
       };

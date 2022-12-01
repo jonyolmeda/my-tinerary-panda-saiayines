@@ -4,15 +4,18 @@ import { URL } from "../../api/url";
 import CardUser from "../CardUser/CardUser";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import './mycitiesc.css'
+
 
 export default function MyCitiesC() {
   let [city, setCity] = useState([]);
+  let token = useSelector((store) => store.loginInReducer.token)
   let navigate = useNavigate();
   useEffect(() => {
     console.log(city);
     axios
-      .get(`${URL}/citiesBy?userId=636d51715d29e99d62636bd8`)
+      .get(`${URL}/citiesBy?userId=${token.id}`)
       .then((res) => setCity(res.data.response))
       .catch((err) => err.message);
   }, []);
@@ -31,7 +34,11 @@ export default function MyCitiesC() {
           icon: "success",
         });
         axios
-          .delete(`${URL}/cities/${id}`)
+          .delete(`${URL}/cities/${id}`,{ 
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
           .then((res) => setCity(res.data.response))
           .catch((err) => err.message);
       } else {
@@ -44,11 +51,12 @@ export default function MyCitiesC() {
   return (
     <div className="main-container-by">
       <div className="w-100">
-        <h1 className="text-center-title">My cities</h1>
-      </div>
-      {city.length > 0 ? (
-        city.map((item) => (
-          <CardUser
+        <h3 className="text-main-cities">My cities</h3>
+      </div> 
+      <div className="container-cards-citiesby">
+       {city.length > 0 ? ( city.map(
+            (item) => (
+            <CardUser
             name={item.name}
             erase={Delete}
             photo={item.photo}
@@ -57,9 +65,9 @@ export default function MyCitiesC() {
             description={item.population}
           />
         ))
-      ) : (
-        <h2 className="min-h-50">Cities not found</h2>
-      )}
+      ) : <h2 className="min-h-50">Cities not found</h2>}
+      </div>
+ 
     </div>
   );
 }

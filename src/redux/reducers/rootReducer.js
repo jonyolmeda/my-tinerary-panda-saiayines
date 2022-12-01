@@ -5,6 +5,8 @@ import hotelByUser from './hotelReducer'
 import cityByUser from './cityByUser'
 import myShowReduce from './myShowReducer'
 import myItineraryReducer from './myItineraryReducer'
+import loginInReducer from './loginInReducer'
+
 
 const rootReducer = {
     cityReducer,
@@ -13,6 +15,7 @@ const rootReducer = {
     hotelByUser,
     cityByUser,
     myShowReduce,
-    myItineraryReducer
+    myItineraryReducer,
+    loginInReducer
 }
 export default rootReducer;

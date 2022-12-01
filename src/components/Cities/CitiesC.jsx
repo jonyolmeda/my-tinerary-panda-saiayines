@@ -19,7 +19,11 @@ export const CitiesC = () => {
 
 
   useEffect(() => {
-    axios.get(`${URL}/cities`)
+    axios.get(`${URL}/cities`, { 
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
     .then(res => setCheckCities(res.data.response))
     .catch(err => console.log(err.message))
 }, [])
@@ -57,8 +61,7 @@ let checkManager = (e) => {
     <div className='container-cities'>
       <div className='container-input-cards'>
         <div className='container-plus'>
-          <input onChange={inputManager} ref={searchRef} className='input-cards' value={filter.name} id='search' type="search" placeholder='Search city...' />
-          <a className='add-city' href="/newcity">Add new city</a>         
+          <input onChange={inputManager} ref={searchRef} className='input-cards' value={filter.name} id='search' type="search" placeholder='Search city...' />        
         </div>
       <div className='checkbox-cards'>
       {
