@@ -20,6 +20,7 @@ import Profile from "./pages/Profile/Profile";
 import EditProfileUser from "./pages/EditProfile/EditProfileUser";
 import NewShows from "./pages/NewShows/NewShows";
 import NewItineraries from "./pages/NewItineraries/NewItineraries";
+import NewReaction from "./pages/NewReaction/NewReaction";
 
 function App() {
   let user = useSelector((store) => store.loginInReducer);
@@ -31,6 +32,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/newreaction" element={<NewReaction/>} />
         <Route path="/" element={<Home />} />
         <Route path="/cities" element={<Cities />} />
         <Route path="/hotels" element={<Hotels />} />
@@ -55,6 +57,7 @@ function App() {
           <Route path="/newhotel" element={<NewHotel />} />
           <Route path="/newshow" element={<NewShows />} />
           <Route path="/newitinerary" element={<NewItineraries/>} />
+          
         </Route>
       </Routes>
     </>

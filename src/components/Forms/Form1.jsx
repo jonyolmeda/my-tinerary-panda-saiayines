@@ -8,10 +8,7 @@ export default function Form1() {
        <div className='container-input'>
        <h4>Sign Up</h4>
         <form className='container-form' action="">
-            <Input/>
-            <div className='container-button'>             
-                <a href="/"><img src="/images/google.png" height='35px' width='35px' alt="Google Logo" /></a>
-            </div>          
+            <Input/>       
         </form>  
                  
         </div>  
