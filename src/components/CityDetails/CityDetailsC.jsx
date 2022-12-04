@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { URL } from "../../api/url";
 import './citydetailsc.css'
+import Itineraries from "../Itineraries/Itineraries";
 
 export default function CityDetailsC() {
   let { cityId } = useParams();
@@ -25,9 +26,7 @@ export default function CityDetailsC() {
     });
   }, [cityId]);
 
-  console.log(city);
-  console.log(photoCity);
-  console.log(itinerary)
+ 
   return (
     <>
  <div className='container-details'>
@@ -42,25 +41,12 @@ export default function CityDetailsC() {
         <p>Pupulation: {city.population}</p>
       </div>
     </div>
-
-{itinerary.map((events) => {
-          return (<div className='container-details-events'>
-          <div className='container-card-details-events'>
-            <div className='img-card-details-events'>
-              <img src={events.photo[0]} alt={events.name} />
-            </div>
-            <div className='card-name-details-events'>
-              <p>{events.name}</p>
-            </div>
-            <div className='card-population-details-events'>
-            <p>Description: {events.description}</p>
-            <p>Price: USD {events.price}</p>
-
-            </div>
-          </div>
-      </div>
+    {itinerary.map((events) => {
+          return (
+            <Itineraries name={events.name} photo={events.photo} description={events.description} price={events.price} id={events._id} />
       )
-        })}</div>
+        })}
+</div>
     </>
   )
 }

@@ -22,7 +22,11 @@ export function EditCard({id}) {
         e.target.capacity.value === '' ? vacio.capacity = e.target.capacity.value : editHotel.capacity=e.target.capacity.value
         e.target.photo.value === '' ? vacio.photo = e.target.photo.value : editHotel.photo=e.target.photo.value
 
-        axios.patch(`${URL}/hotels/${id}`, editHotel)
+        axios.patch(`${URL}/hotels/${id}`, editHotel, { 
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
             .then(res => {
                 if(res.data.success){
                     Swal.fire({

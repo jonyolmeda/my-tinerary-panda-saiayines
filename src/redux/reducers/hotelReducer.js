@@ -7,7 +7,6 @@ const initialState = {
 
 const hotelReducer = createReducer(initialState,(hotel)=>{
     hotel.addCase(hotelAction.getHotels.fulfilled,(state,action)=>{
-        console.log(action.payload)
         return {...state,hotel:action.payload.hotels}
     })
     hotel.addCase(hotelAction.getHotelsBySearch.fulfilled,(state,action)=>{

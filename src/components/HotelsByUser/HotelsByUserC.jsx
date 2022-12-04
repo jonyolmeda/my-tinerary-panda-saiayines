@@ -5,15 +5,21 @@ import {URL} from "../../api/url";
 import CardUser from "./CardUser";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import hotelByUserAction from '../../redux/actions/hotelByUserAction';
 
 export default function HotelsByUserC() {
     let [hotel, setHotel] = useState([]);
+    let token = useSelector((store) => store.loginInReducer.token)
 
     useEffect(() => {
         console.log(hotel);
         axios
-            .get(`${URL}/hotelsBy?userId=636d51715d29e99d62636bd9`)
+            .get(`${URL}/hotelsBy?userId=${token.id}`, { 
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            })
             .then((res) => setHotel(res.data.response))
             .catch((err) => err.message);
     }, []);
