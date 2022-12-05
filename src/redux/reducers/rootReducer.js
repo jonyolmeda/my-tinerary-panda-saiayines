@@ -6,8 +6,11 @@ import cityByUser from './cityByUser'
 import myShowReduce from './myShowReducer'
 import myItineraryReducer from './myItineraryReducer'
 import loginInReducer from './loginInReducer'
+
+import commentReducer from './commentReducer'
 import reactionReducer from './reactionReducer'
 import tokenReducer from './tokenReducer'
+
 
 const rootReducer = {
     cityReducer,
@@ -18,6 +21,8 @@ const rootReducer = {
     myShowReduce,
     myItineraryReducer,
     loginInReducer,
+
+    commentReducer,
     reactionReducer,
     tokenReducer
 }

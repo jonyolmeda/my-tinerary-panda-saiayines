@@ -97,11 +97,7 @@ export default function NavBar() {
               <a href="-">New Hotel</a>
             </li>
             </NavLink>
-            <NavLink to="/newcity">
-            <li>
-              <a href="-">New City</a>
-            </li>
-            </NavLink>
+            c
             <NavLink to="/newitinerary">
             <li>
               <a href="-">New Itineraries</a>

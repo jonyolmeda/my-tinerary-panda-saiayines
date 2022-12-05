@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { URL } from "../../api/url";
 import "./hoteldetailsc.css";
+import Shows from "./Shows";
+
 
 export default function HotelDetailsC() {
   let { id } = useParams();
@@ -24,9 +26,6 @@ export default function HotelDetailsC() {
     });
   }, [id]);
 
-  console.log(hotel);
-  console.log(photoHotel);
-  console.log(shows)
   return (
     <>
       <div className="container-details">
@@ -43,22 +42,9 @@ export default function HotelDetailsC() {
         </div>
       
       
-      {shows.map((events) => {
-          return (<div className='container-details-events'>
-          <div className='container-card-details-events'>
-            <div className='img-card-details-events'>
-              <img src={events.photo} alt={events.name} />
-            </div>
-            <div className='card-name-details-events'>
-              <p>{events.name}</p>
-            </div>
-            <div className='card-population-details-events'>
-            <p>Description: {events.description}</p>
-            <p>Price: USD {events.price}</p>
-
-            </div>
-          </div>
-      </div>
+      {shows.map((e) => {
+          return (
+            <Shows photo={e.photo}  name={e.name}  description ={e.description} price={e.price} id={e._id} />
       )
         })}
         </div>
