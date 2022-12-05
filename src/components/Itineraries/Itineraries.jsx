@@ -1,7 +1,9 @@
 import React from 'react'
 import '../CityDetails/citydetailsc.css'
 import Reaction from '../Reactions/Reactions'
-
+import Comments from '../HotelDetailsC/Comment'
+import NewComments from '../HotelDetailsC/NewComment'
+import  "../HotelDetailsC/hoteldetailsc.css"
 
 export default function Itineraries(props) {
     let {name, photo, description, price, id} = props
@@ -24,6 +26,10 @@ export default function Itineraries(props) {
             </div>
             <Reaction idItinerary={idItinerary}/>
         </div>
+        <div>
+            <NewComments id={id}/>
+            <Comments idShow={id}/>
+            </div>
     </div>  
   )
 }
