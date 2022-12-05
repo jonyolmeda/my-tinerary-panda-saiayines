@@ -24,6 +24,55 @@
     font-weight:bolder;
     font-size: 1rem;
 }
+
+.cardReaction{
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8mm 0mm 8mm 0mm;;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 220px;
+    min-height: 200px;
+    padding-bottom: 10px;
+}
+.like{
+    box-shadow: 0 0 20px rgb(6, 126, 238);
+}
+.love{
+    box-shadow: 0 0 20px rgb(206, 69, 69);
+  }
+.not-like{
+    box-shadow: 0 0 20px rgb(100, 101, 102);
+  }
+.surprise{
+    box-shadow: 0 0 20px rgb(193, 196, 30);
+  }
+
+  .container-page-reactions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+.title-page-reactions{
+    font-size: 40px;
+}
+.cards-page-reactions{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.image-page-reactions{
+    width: 100px;
+    height: 100px;
+}
+
+.container-card-details-events2{
+    width: 1;
+}
+
 @media screen and (max-width: 700px){
     .container-forms-byshow{
         width: 550px;
