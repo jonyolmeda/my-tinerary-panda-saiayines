@@ -89,7 +89,7 @@ export default function NewItinerariesC() {
       </label>
       <label className="label-form-new">
         Duration:
-        <input className='inputin-show' type='number' id='emailInput' value='Submit' ref={duration}  />
+        <input className='inputin-show' type='number' id='emailInput'  ref={duration}  />
       </label>
       <select
                     type="text"
@@ -105,7 +105,7 @@ export default function NewItinerariesC() {
                     })}
                 </select>
       <div className='container-submit-show'>
-      <input onClick={submit} className="submit-show" type='submit'/>
+      <input onClick={submit} className="submit-show" value='Submit' type='submit'/>
       </div>
       </form>
     </div>
