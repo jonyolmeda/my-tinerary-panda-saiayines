@@ -8,6 +8,7 @@ export default function Itineraries(props) {
     let idItinerary = props.id
 
   return (
+    
     <div className='container-details-events'>
         <div className='container-card-details-events'>
             <div className='img-card-details-events'>

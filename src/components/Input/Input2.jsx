@@ -15,8 +15,8 @@ export default function Input2() {
   let store = useSelector((state) => state.loginReducer);
   const navigate = useNavigate();
 
-  console.log(store)
-async function saveData(e) {
+  console.log(store);
+  async function saveData(e) {
     e.preventDefault();
     let logged = {
       email: emailRef.current.value,
@@ -25,14 +25,19 @@ async function saveData(e) {
     try {
       let res = await axios.post(`${URL}/auth/signin`, logged);
       let tokenx = res.data.response.token;
+      console.log(res.data.response);
       if (res.data.success) {
         dispatch(loginAction.getToken(tokenx));
         localStorage.setItem("token", tokenx);
+        localStorage.setItem(
+          "user",
+          JSON.stringify(res.data.response.userToken.id)
+        );
         Swal.fire({
           icon: "success",
           text: res.data.message,
         });
-        navigate('/')
+        navigate("/");
       } else {
         Swal.fire({
           icon: "error",

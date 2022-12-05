@@ -77,11 +77,6 @@ export default function NavBar() {
             <a href="-">Sign In</a>
             </li>
             </NavLink>
-            <NavLink to="/newreaction">
-            <li>
-              <a href="-">My Reactions</a>
-            </li>
-            </NavLink>
           </ul>
           </ul>
             </>
@@ -97,7 +92,11 @@ export default function NavBar() {
               <a href="-">New Hotel</a>
             </li>
             </NavLink>
-            c
+            <NavLink to="/newcity">
+               <li>
+              <a href="-">New City</a>
+            </li>
+            </NavLink>
             <NavLink to="/newitinerary">
             <li>
               <a href="-">New Itineraries</a>
@@ -106,6 +105,11 @@ export default function NavBar() {
             <NavLink to="/newshow">
             <li>
               <a href="-">New shows</a>
+            </li>
+            </NavLink>
+            <NavLink to="/newreaction">
+            <li>
+              <a href="-">New Reaction</a>
             </li>
             </NavLink>
             <NavLink to="/myshows">
@@ -128,7 +132,7 @@ export default function NavBar() {
               <a href="-">My Itineraries</a>
             </li>
             </NavLink>
-            <NavLink to="/newreaction">
+            <NavLink to="/myreaction">
             <li>
               <a href="-">My Reactions</a>
             </li>
