@@ -14,8 +14,8 @@ export default function MyReactionCard(props) {
       }
     >
       <div className="container-card-details-events2">
-        <div className="img-card-details-events2">
-          <img src={photo} alt={name} />
+        <div className="cont-img-card-details-events2">
+          <img className="img-card-details-events2" src={photo} alt={name} />
         </div>
         <div className="card-name-details-events2">
           <p>{name}</p>
