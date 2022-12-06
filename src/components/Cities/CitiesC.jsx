@@ -17,6 +17,7 @@ export const CitiesC = () => {
   const {getCities, getFilteredCities} = cityAction
   const {cities} = useSelector(state => state.cityReducer)
 
+  
 
   useEffect(() => {
     axios.get(`${URL}/cities`, { 

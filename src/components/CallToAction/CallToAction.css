@@ -26,29 +26,21 @@
     align-items: center;
     font-weight: 700;  
     text-decoration: none;
+    padding: 0.5rem;
 }
+
+.navlink-call{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1264px){
+    .boton-cta{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 1264px){
     .boton-cta{
-        width: 40%;
-    }
-}
-@media screen and (max-width: 900px){
-    .boton-cta{
-        width: 50%;
-    }
-}
-@media screen and (max-width: 710px){
-    .boton-cta{
-        width: 75%;
-    }
-}
-@media screen and (max-width: 500px){
-    .boton-cta{
-        width: 95%;
-    }
-}
-@media screen and (max-width: 540px){
-    .boton-cta{
-        height: 60%;
+        width: 100%;
     }
 }
