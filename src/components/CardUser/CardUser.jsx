@@ -44,7 +44,7 @@ export default function CardUser({name, photo, description,id}) {
                 <button className='button-cities-delete' value={id} onClick={e=> deleteIt(id)}>Delete</button>
                 </div>    
         </div>
-        <div class='container-edit-cities'>
+        <div className='container-edit-cities'>
         {push?(<EditCard id={id} />): ''}
         </div>
         </div>
