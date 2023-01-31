@@ -69,44 +69,72 @@ export default function NewItinerariesC() {
   }
 
   return (
-    <div class="contenedor-form">
+    <div className="contenedor-form">
       <form ref={formRef} className="form-new-shows" onSubmit={submit}>
-      <label className="label-form-new">
-        Itinerary name:
-        <input className='inputin-show' type='text' id='nameInput' ref={name} />
-      </label>
-      <label className="label-form-new">
-        Description:
-        <input className='inputin-show' type='text' id='descriptionInput' ref={description}  />
-      </label>
-      <label className="label-form-new">
-        Photo:
-        <input className='inputin-show' type='text' id='photoInput' ref={photo}  />
-      </label>
-      <label className="label-form-new">
-        Price:
-        <input className='inputin-show' type='number' id='priceInput' ref={price}  />
-      </label>
-      <label className="label-form-new">
-        Duration:
-        <input className='inputin-show' type='number' id='emailInput'  ref={duration}  />
-      </label>
-      <select
-                    type="text"
-                    placeholder="City ID"
-                    className='form__input_show'
-                    ref={cityId}
-                >
-                <option value="">Choose a City</option>
-                    {cityList.map((city) => {
-                        return (
-                            <option value={city._id}>{city.name}</option>
-                        )
-                    })}
-                </select>
-      <div className='container-submit-show'>
-      <input onClick={submit} className="submit-show" value='Submit' type='submit'/>
-      </div>
+        <label className="label-form-new">
+          Itinerary name:
+          <input
+            className="inputin-show"
+            type="text"
+            id="nameInput"
+            ref={name}
+          />
+        </label>
+        <label className="label-form-new">
+          Description:
+          <input
+            className="inputin-show"
+            type="text"
+            id="descriptionInput"
+            ref={description}
+          />
+        </label>
+        <label className="label-form-new">
+          Photo:
+          <input
+            className="inputin-show"
+            type="text"
+            id="photoInput"
+            ref={photo}
+          />
+        </label>
+        <label className="label-form-new">
+          Price:
+          <input
+            className="inputin-show"
+            type="number"
+            id="priceInput"
+            ref={price}
+          />
+        </label>
+        <label className="label-form-new">
+          Duration:
+          <input
+            className="inputin-show"
+            type="number"
+            id="emailInput"
+            ref={duration}
+          />
+        </label>
+        <select
+          type="text"
+          placeholder="City ID"
+          className="form__input_show"
+          ref={cityId}
+        >
+          <option value="">Choose a City</option>
+          {cityList.map((city) => {
+            return <option value={city._id}>{city.name}</option>;
+          })}
+        </select>
+        <div className="container-submit-show">
+          <input
+            onClick={submit}
+            className="submit-show"
+            value="Submit"
+            type="submit"
+          />
+        </div>
       </form>
     </div>
   );

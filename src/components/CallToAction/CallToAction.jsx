@@ -7,12 +7,8 @@ export default function CallToAction(props) {
   return (
     <div className="contenedor-boton-cta">
        <NavLink className='navlink-call' to={Link}>
-          <a href="-" className="boton-cta">{nameButton}</a>
+          <a href="-" className="btn-donate">{nameButton}</a>
        </NavLink>
        </div>
   )
 }
-
-{/* <div className="contenedor-boton-cta">
-        <a href={Link} className="boton-cta">{nameButton}</a>
-      </div> */}
