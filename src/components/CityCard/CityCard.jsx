@@ -5,17 +5,14 @@ import { Link } from "react-router-dom";
 export default function CityCard(props) {
     let {img,name,id} = props
   return (
-    <div className='container-card'>
+    <div class="card">
       <div className='img-card'>
         <img src={img} alt={name} />
+        <div class="card-details">
+        <p class="text-title">{name}</p>
       </div>
-      <div className='card-name'>
-        <p>{name}</p>
       </div>
-      <div className='container-card-id'>
-        <Link className='card-id' to={`/detailCity/${id}`}>Details</Link>
-      </div>
-      
+        <Link className='card-button' to={`/detailCity/${id}`}>Details</Link>
     </div>
   )
 }

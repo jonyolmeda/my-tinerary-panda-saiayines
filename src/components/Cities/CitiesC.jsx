@@ -70,6 +70,7 @@ let checkManager = (e) => {
              return (
             <label className='check-label' key={e}>
                 <input checked={filter.continent.includes(e) ? true : false} onClick={checkManager} type='checkbox' value={e} /> {e}
+                <div class="checkmark"></div>
             </label>
       )
           })

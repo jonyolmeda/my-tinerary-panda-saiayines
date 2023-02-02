@@ -6,18 +6,15 @@ import { Link } from "react-router-dom";
 export default function HotelCard(props) {
   let {img,name,id} = props
   return (
-    <div className='container-card'>
-    <div className='img-card'>
-      <img src={img} alt={name} />
+    <div class="card">
+      <div className='img-card'>
+        <img src={img} alt={name} />
+        <div class="card-details">
+        <p class="text-title">{name}</p>
+      </div>
+      </div>
+        <Link className='card-button' to={`/detailHotel/${id}`}>Details</Link>
     </div>
-    <div className='card-name'>
-      <p>{name}</p>
-    </div>
-    <div className='container-card-id'>
-    <Link className='card-id' to={`/detailHotel/${id}`}>Details</Link>
-    </div>
-    
-  </div>
   )
 }
 
