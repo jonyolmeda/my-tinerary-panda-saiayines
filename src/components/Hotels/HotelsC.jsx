@@ -45,7 +45,7 @@ let bySearch = (e)=>{
             <option value="asc" >Ascendent</option>
             <option value="desc">Descendent</option>
         </select>
-         <input onChange={bySearch} className='input-search' id='search' type="search" placeholder='Search Hotels...' />
+         <input onChange={bySearch} className='input' id='search' type="search" placeholder='Search Hotels...' />
         
          </div>
       <div className='container-cards'>

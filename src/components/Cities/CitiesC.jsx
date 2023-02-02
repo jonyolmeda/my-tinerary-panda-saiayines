@@ -62,7 +62,7 @@ let checkManager = (e) => {
     <div className='container-cities'>
       <div className='container-input-cards'>
         <div className='container-plus'>
-          <input onChange={inputManager} ref={searchRef} className='input-cards' value={filter.name} id='search' type="search" placeholder='Search city...' />        
+          <input onChange={inputManager} ref={searchRef} className='input' value={filter.name} id='search' type="search" placeholder='Search city...' />        
         </div>
       <div className='checkbox-cards'>
       {

@@ -87,11 +87,11 @@ const dataCity ={
 }
   return (
 
-    <div className='.container-newcity'>
-      <label >
-        City name:
-        <input className='inputin' type='text' id='nameInput' ref={nameRef} />
-      </label>
+    <div className='container-newcity'>
+    <div class="inputGroup">
+    <input type="text" required="" autocomplete="off"/>
+    <label for="name">Name</label>
+      </div>
       <label >
         Continent:
         <input className='inputin' type='text' id='lastNameInput' ref={continentRef}  />
