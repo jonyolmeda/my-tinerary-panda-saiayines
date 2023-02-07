@@ -30,14 +30,10 @@ export default function HotelDetailsC() {
     <>
       <div className="container-details">
         <div className="container-card-details">
+          <h1 className="title-hotel">{hotel.name}</h1>
+          <h3 className="subtitle-hotel">Capacity: {hotel.capacity}</h3>
           <div className="img-card-details">
             <img src={photoHotel[0]} alt={hotel.name} />
-          </div>
-          <div className="card-name-details">
-            <p>{hotel.name}</p>
-          </div>
-          <div className="card-population-details">
-            <p>Capacity: {hotel.capacity}</p>
           </div>
         </div>
       
