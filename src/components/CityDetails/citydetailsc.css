@@ -1,4 +1,4 @@
-.container-card-details{
+/* .container-card-details{
     width: 800px;
     height: 600px;
     border-radius: 50px;
@@ -12,14 +12,14 @@
     color: white;
     font-size: 20px;
     flex-direction: column;
-}
+} */
 .container-details{
 width: 100%;
 display: flex;
 justify-content: center;
 flex-direction: column;
 padding-top: 2rem;
-background-image: url(/public/images/353018.jpg);
+background-image: url(https://wallpaperaccess.com/full/2704587.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 align-items: center;
