@@ -9,174 +9,166 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    align-items: start;
+    padding-top: 5rem;
     flex-wrap: wrap;
 }
-
-  .profile-card {
-    display: flex;
-    flex-direction: row;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-    flex-grow: 1;
-    width: 100%;
-    margin-top: 45px;
-  }
-  .container-column-1 {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    height: 100%;
-    padding: 20px;
-    margin-left: 140px;
-    background-color: #70798C;
-    color: white;
-    border-top: 2px solid rgba(55, 55, 55, 0.731);
-    border-left: 2px solid rgba(55, 55, 55, 0.731);
-    border-right: 2px solid rgba(55, 55, 55, 0.731);
-    box-shadow: 0px 4px 1px #F5F1ED;
-  }
-  .container-column-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .profile-pic {
-    width: 125px;
-    height: 125px;
-    border-radius: 100px;
-    object-fit: cover;
-  }
-  .col-1-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-  .col-1-links > a {
-    text-decoration: none;
-    color: white;
-  }
-  .col-1-links > a:hover {
-    text-decoration: none;
-    color: #A99985;
-    font-weight: bold;
-  }
-  .container-column-2 {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 600px;
-    padding: 20px;
-    margin-right: 80px;
-    background-color: #70798C;
-    border-top: 2px solid rgba(55, 55, 55, 0.731);
-    border-right: 2px solid rgba(55, 55, 55, 0.731);
-    box-shadow: 0px 4px 1px #F5F1ED;
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-  .columna-header-2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .userData-columns {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 6rem;
-  }
-  .col-2-userData-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 40%;
-    gap: 1rem;
-  }
-  .col-2-userData-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 40%;
-    gap: 1rem;
-  }
-  input{
-      background-color: #70798C;
-      color: white;
-      border: none;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #DAD2BC;
-      outline: none;
-  }
-.inputs-profile{
-      color: #DAD2BC;
-      font-weight: bold;
-      text-transform: uppercase;
-  }
-
-  .inputs-profile::placeholder{
-    color: white;
-  }
-
-@media screen and  (max-width: 780px){
-    .profile-card {
-        flex-direction: column;
-        margin: 45px;
-        justify-content: center;
-        gap: 0.4rem
-      }
-
-    .container-column-1{
-        width: 100%;
-        margin-left: 0px;
-    }
-    .container-column-2 {
-        width: 100%;
-        flex-direction: column;
-        margin-right: 0px;
-      }
-    .userData-columns{
-      flex-direction: column;
-      width:100%;
-      gap: 0.5rem;
-    }
-
-    .inputs-profile{
-      width: 200px;
-  }
+/*Magic card*/
+.cont-card-profile {
+  width: 800px;
+  height: 600px;
+  background: #f5f5f5;
+  overflow: visible;
+  box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  margin-bottom: 1rem;
+ }
+ 
+ .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  padding: 0 1rem;
+ }
+ 
+ .card-img {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  transition: all .3s ease-in-out;
+ }
+ 
+ .card-img::before {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  border: 1rem solid #e8e8e8;
+ }
+ 
+ /*Text*/
+ .text-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #42caff;
+  letter-spacing: 0.05rem;
+ }
+ 
+ .text-body {
+  font-size: 1rem;
+  text-align: center;
+  color: #19076d;
+  font-weight: 600;
+  font-style: italic;
+ }
+ 
+ /*Hover*/
+ .cont-card-profile:hover .card-img {
+  --size: 120px;
+  width: var(--size);
+  height: var(--size);
+ }
+ @media screen and (max-width: 820px){
+  .cont-card-profile {
+    width: 600px;
+   }
+}
+@media screen and (max-width: 620px){
+  .cont-card-profile {
+    width: 400px;
+    margin-bottom: 1rem;
+   }
+}
+.btn-profile {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #42caff;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+  font-weight: 600;
 }
 
-
-
-@media screen and  (max-width: 585px){
-    
-    .container-column-1{
-        width: 90%;
-        margin-left: 30px;
-    }
-    .container-column-2 {
-        width: 90%;
-        margin-left: 30px;
-      }
+.btn-profile::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #42caff;
+  transition: .5s ease;
+  font-weight: 600;
 }
 
-@media screen and  (max-width: 500px){
-    
-    .container-column-1{
-        margin-left: 10px;
-        width: 100%;
-    }
-    .container-column-2 {
-        margin-left: 10px;
-        width: 100%;
-      }
-   
+.btn-profile:hover {
+  color: #1e1e2b;
+  transition-delay: .5s;
 }
+
+.btn-profile:hover::before {
+  width: 100%;
+}
+
+.btn-profile::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #42caff;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.btn-profile:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: rgb(80, 150, 211);
+}
+.cont-card-profile-edit {
+  width: 800px;
+  height: 1000px;
+  background: #f5f5f5;
+  overflow: visible;
+  box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  margin-bottom: 1rem;
+ }
+ .style-input-edit{
+    background: none;
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #1574f0;
+  }
+  @media screen and (max-width: 820px){
+    .cont-card-profile-edit {
+      width: 600px;
+     }
+  }
+  @media screen and (max-width: 620px){
+    .cont-card-profile-edit {
+      width: 400px;
+     }
+    }

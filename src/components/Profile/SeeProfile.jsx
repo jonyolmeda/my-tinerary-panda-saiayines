@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { URL } from "../../api/url";
+import { NavLink } from "react-router-dom";
 
 export default function SeeProfile() {
   const [user, setUser] = useState([]);
@@ -25,50 +26,16 @@ export default function SeeProfile() {
 
   return (
     <>
-      <div className="col-2-header">
-        <h4>Your Profile</h4>
+    <div className="cont-card-profile">
+    <img className="card-img" src={`${user.photo}`} alt={`${user.name}`}/>
+    <div className="card-info">
+      <p className="text-body">{user.name}</p>
+      <p className="text-body">{user.lastName}</p>
+      <p className="text-body">{user.age} Years old</p>
+      <p className="text-body">{user.email}</p>
+      <NavLink className="text-title" to={"/profileEdit"}> Edit</NavLink>
       </div>
-      <div className="userData-columns">
-        <form className="col-2-userData-1">
-          <label> Name: </label>
-          <input
-            className="inputs-profile"
-            type="text"
-            value={`${user.name}`}
-            disabled
-          />
-          <label> LastName: </label>
-          <input
-            className="inputs-profile"
-            type="text"
-            value={`${user.lastName}`}
-            disabled
-          />
-          <label> Photo: </label>
-          <input
-            className="inputs-profile"
-            type="text"
-            value={`${user.photo}`}
-            disabled
-          />
-        </form>
-        <form className="col-2-userData-2">
-          <label> Age: </label>
-          <input
-            className="inputs-profile"
-            type="number"
-            value={`${user.age}`}
-            disabled
-          />
-          <label> Email: </label>
-          <input
-            className="inputs-profile"
-            type="text"
-            value={`${user.email}`}
-            disabled
-          />
-        </form>
-      </div>
+    </div>
     </>
   );
 }

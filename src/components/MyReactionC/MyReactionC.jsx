@@ -27,7 +27,7 @@ export default function MyReactionC(props) {
 
   return (
     <div className="container-page-reactions">
-      <div className="">
+      <div className="container-title-page-reactions">
         <h1 className="title-page-reactions">My Reactions</h1>
       </div>
 
