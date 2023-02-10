@@ -1,0 +1,108 @@
+.container-page-reactions{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.redijl.org/wp-content/uploads/2018/10/Rio-De-Janeiro_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.cardReaction{
+    margin: 10px;
+    width: 19em;
+    height: 25.5em;
+    padding-bottom: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: #171717;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+}
+.container-title-page-reactions{
+    display: flex;
+    justify-content: center;
+}
+.title-page-reactions{
+    font-size: 50px;
+    color: white;
+    text-shadow: unset;
+    margin-bottom: 3rem;
+}
+.cards-page-reactions{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+}
+.container-card-details-events2{
+    width: 100%;
+}
+.cont-image-page-reactions2{
+height: 10vh;
+}
+.image-page-reactions2{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+.card-reaction {
+    width: 19em;
+    height: 25.5em;
+    background: #171717;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.card-reaction span {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 1em;
+    font-size: 1em;
+}
+.card-reaction .img {
+    width: 4.8em;
+    height: 4.8em;
+    background: white;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 1.7em;
+}
+.card-reaction button {
+    padding: 0.8em 1.7em;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+    border: none;
+    margin-top: 2em;
+    font-weight: bold;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: .4s ease-in-out;
+}
+.card-reaction button:hover {
+    background: rgb(36, 116, 221);
+    color: white;
+}
+.container-img-reaction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    margin-top: 1.5rem;
+}
+.imgphoto{
+    display: flex;
+    width: 80%;
+    height: 300px;
+    border-radius: 15px;
+}
+.imgreact{
+    width: 30px;
+    height: 30px;
+}
+.imgreactletters{
+    color: white;
+    font-variant: small-caps;
+}

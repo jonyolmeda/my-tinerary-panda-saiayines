@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../myShows/cardshows.css";
+import "../MyReactionC/myreactions.css";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import reductionAction from "../../redux/actions/reactionActions";
@@ -27,7 +27,7 @@ export default function MyReactionC(props) {
 
   return (
     <div className="container-page-reactions">
-      <div className="">
+      <div className="container-title-page-reactions">
         <h1 className="title-page-reactions">My Reactions</h1>
       </div>
 
@@ -40,7 +40,7 @@ export default function MyReactionC(props) {
               showConfirmButton: true,
               iconColor: "#01344f",
               confirmButtonColor: "#01344f",
-              confirmButtonText: "Yes",
+              confirmButtonText: "Sure",
               showCancelButton: true,
             }).then(async (result) => {
               if (result.isConfirmed) {
