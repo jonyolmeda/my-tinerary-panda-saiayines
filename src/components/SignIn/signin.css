@@ -4,10 +4,15 @@
     padding: 0;
 }
 .container-signin{
-    background: rgb(51,181,184);
-    background: linear-gradient(180deg, rgba(51,181,184,1) 17%, rgba(245,201,155,1) 89%);
+    background-image: url(https://aeropuertosdelmundo.com.ar/images/wallpaper1.jpg);
     width: 100%;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    flex-direction: column;
+    background-position: center;
 }
