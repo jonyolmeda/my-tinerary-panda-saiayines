@@ -6,7 +6,6 @@ export default function Form1() {
   return (
     <div className='container-form'>
        <div className='container-input'>
-       <h4>Sign Up</h4>
         <form className='container-form' action="">
             <Input/>       
         </form>  
