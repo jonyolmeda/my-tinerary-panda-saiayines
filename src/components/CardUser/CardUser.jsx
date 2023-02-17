@@ -40,9 +40,11 @@ export default function CardUser({name, photo, description,id}) {
                 <p className=''>Population: {description}</p>
             </div>    
                 <div className='buttons-cities-by'>
-                <button className='button-cities-edit' value={id}  onClick={()=>setPush(!push)}>Edit</button>
-                <button className='button-cities-delete' value={id} onClick={e=> deleteIt(id)}>Delete</button>
-                </div>    
+                  <button class="icon-btn add-btn" value={id}  onClick={()=>setPush(!push)}>
+                  <div class="add-icon"></div>
+                  <div class="btn-txt">Edit</div></button>
+                  <button className='button-cities-delete' value={id} onClick={e=> deleteIt(id)}>Delete</button>
+                  </div>    
         </div>
         <div className='container-edit-cities'>
         {push?(<EditCard id={id} />): ''}

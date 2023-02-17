@@ -3,6 +3,7 @@ import {URL} from '../../api/url'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
+import './editcard.css'
 
 export function EditCard({id}) {
     let navigate = useNavigate()
@@ -46,14 +47,14 @@ export function EditCard({id}) {
     }
   return (
     <div className=''>
-        <form className='' onSubmit={submit}>
-            <label className=''>
+        <form className='form-edit' onSubmit={submit}>
+            <label className='label'>
             <p>City Name</p>
             <input className='' type="text" name='name' min='3' placeholder=' name...'/></label>
-            <label className=''>
+            <label className='label'>
             <p>City Population</p>
             <input className='' type="number" name="population" min='1' placeholder='population...'/></label>
-            <label className=''>
+            <label className='label'>
             <p>Urls Photos</p>
             <input className=''  type='url' name="photo" placeholder='image'/>
             </label>
