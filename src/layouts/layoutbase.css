@@ -15,8 +15,8 @@
 }
 .contenedor-ScrollToTop{
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     padding-right: 3rem;
     padding-bottom: 1.5rem;
     position: sticky;

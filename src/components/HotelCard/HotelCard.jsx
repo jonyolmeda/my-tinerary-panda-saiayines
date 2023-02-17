@@ -10,7 +10,7 @@ export default function HotelCard(props) {
       <div className='img-card'>
         <img src={img} alt={name} />
         <div class="card-details">
-        <p class="text-title">{name}</p>
+        <p class="text-title-card">{name}</p>
       </div>
       </div>
         <Link className='card-button' to={`/detailHotel/${id}`}>Details</Link>

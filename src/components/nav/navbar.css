@@ -9,7 +9,7 @@
     display: flex;
     width: 100%;
     height: 15vh;
-    background-color: #5E574D;
+    background-color: #000000dc;
     justify-content: flex-start;
     gap: 5rem;
     align-items: center;
@@ -31,17 +31,32 @@ height: 50%;
 align-items: center;
 justify-content: center;
 }
-.boton-nav{
-    font-family: 'Amiri', serif;
-    text-decoration: none;
-    font-size: 1.5rem;
+.boton-nav {
     color: white;
-    padding: 0.5rem;
-}
-.boton-nav:hover {
-    background-color: rgb(170, 169, 169);
-    border-radius: 15px;
-} 
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .boton-nav::before {
+    margin-left: auto;
+  }
+  
+  .boton-nav::after, button::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #1e77ca;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .boton-nav:hover::after, .boton-nav:hover::before {
+    width: 100%;
+  }
 .contenedor-lista{
     display: flex;
     align-items: center;
