@@ -52,7 +52,7 @@ export default function Input() {
 }
 return (
   <form className="form-login-singup" ref={formRef}>
-  <p id="heading">Sign in</p>
+  <p id="heading">Sign Up</p>
   <div className="field">
   
     <input autocomplete="off" placeholder="Name" className="input-field" type="email" id="emailSignIn" ref={nameRef} required/>
