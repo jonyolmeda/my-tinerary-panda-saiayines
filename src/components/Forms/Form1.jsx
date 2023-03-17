@@ -5,7 +5,7 @@ import Input from '../Input/Input'
 export default function Form1() {
   return (
     <div className='container-form'>
-       <div className='container-input'>
+       <div className=''>
         <form className='container-form' action="">
             <Input/>       
         </form>  

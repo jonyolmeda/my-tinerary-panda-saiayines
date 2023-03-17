@@ -95,6 +95,21 @@ height: 10%;
   width: 30rem;
 }
 
+.form-login-singup {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  height: 50rem;
+  width: 30rem;
+}
+
 .form-login:hover {
   transform: scale(1.05);
   border: 1px solid black;

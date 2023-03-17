@@ -30,15 +30,17 @@ export default function CityDetailsC() {
   return (
     <>
  <div className='container-details'>
+      <h1 className="title-hotel">{city.name}</h1>
+      <h3 className="subtitle-hotel">Capacity: {city.population}</h3>
     <div className='container-card-details'>
       <div className='img-card-details'>
         <img src={photoCity} alt={city.name} />
       </div>
       <div className='card-name-details'>
-        <p>{city.name}</p>
+       
       </div>
       <div className='card-population-details'>
-        <p>Pupulation: {city.population}</p>
+        
       </div>
     </div>
     {itinerary.map((events) => {
